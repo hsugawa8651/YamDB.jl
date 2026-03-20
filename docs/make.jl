@@ -19,3 +19,7 @@ makedocs(;
     ),
     remotes=nothing,
 )
+
+deploydocs(;
+    repo="github.com/hsugawa8651/YamDB.jl",
+)
