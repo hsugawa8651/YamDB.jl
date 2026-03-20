@@ -1,0 +1,56 @@
+# Julia package artifacts
+Manifest.toml
+*.jl.cov
+*.jl.*.cov
+*.jl.mem
+deps/deps.jl
+deps/build.log
+deps/usr/
+
+# Documentation build
+docs/build/
+docs/site/
+
+
+# Conflict backup files (VS Code etc.)
+**/Conflict*
+
+# IDE and editors
+*.swp
+*.swo
+*~
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Jupyter notebooks
+.ipynb_checkpoints/
+
+# Local environment
+.env
+.envrc
+
+# Coverage
+/coverage/
+lcov.info
+
+# Python (reftest scripts)
+__pycache__/
+*.pyc
+
+# reftest: generated reference data
+reftest/data/*
+!reftest/data/.gitkeep
+
+# AI tools
+CLAUDE.md
+.claude/
+.gemini/
+
+# Preserve empty directory structure
+!.gitkeep

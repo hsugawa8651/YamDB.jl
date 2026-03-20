@@ -1,0 +1,47 @@
+# JuliaFormatter configuration for YamDB.jl
+# Run: julia -e 'using JuliaFormatter; format(".")'
+
+# Style
+style = "default"
+
+# Indentation
+indent = 4
+
+# Margin (line length)
+margin = 92
+
+# Always use return keyword
+always_use_return = false
+
+# Normalize line endings
+normalize_line_endings = "unix"
+
+# Remove extra newlines
+remove_extra_newlines = true
+
+# Whitespace in type annotations
+whitespace_typedefs = false
+
+# Whitespace in keyword arguments
+whitespace_in_kwargs = true
+
+# Import sorting
+import_to_using = false
+
+# Pipe operations
+pipe_to_function_call = false
+
+# Align assignments
+align_assignment = false
+align_struct_field = false
+align_conditional = false
+align_pair_arrow = false
+
+# Trailing commas
+trailing_comma = true
+
+# Format docstrings
+format_docstrings = true
+
+# Indent submodule
+indent_submodule = true

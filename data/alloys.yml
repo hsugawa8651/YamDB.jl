@@ -1,0 +1,1126 @@
+---
+Bi-Li:
+  4-96:
+    M: 0.01502162
+    Tm: null
+    Tb: null
+    density:
+      Steinleitneretal1975:
+        D1: 1.05
+        equation: Linstrom1992DP
+        Tmin: 900
+        Tmax: 900
+        default: true
+        uncertainty: 30%
+        comment: "Tab. 1 p. 1189"
+  10.6-89.4:
+    M: 0.02835628
+    Tm: null
+    Tb: null
+    density:
+      Steinleitneretal1975:
+        D1: 2.1
+        equation: Linstrom1992DP
+        Tmin: 900
+        Tmax: 900
+        default: true
+        uncertainty: 30%
+        comment: "Tab. 1 p. 1189"
+  19.4-80.6:
+    M: 0.04613584
+    Tm: null
+    Tb: null
+    density:
+      Steinleitneretal1975:
+        D1: 3.5
+        equation: Linstrom1992DP
+        Tmin: 1100
+        Tmax: 1100
+        default: true
+        uncertainty: 30%
+        comment: "Tab. 1 p. 1189"
+  21.2-78.8:
+    M: 0.04977256
+    Tm: null
+    Tb: null
+    density:
+      Steinleitneretal1975:
+        D1: 3.5
+        equation: Linstrom1992DP
+        Tmin: 1100
+        Tmax: 1100
+        default: true
+        uncertainty: 30%
+        comment: "Tab. 1 p. 1189"
+  26.8-73.2:
+    M: 0.06108683
+    Tm: null
+    Tb: null
+    density:
+      Steinleitneretal1975:
+        D1: 5.3
+        equation: Linstrom1992DP
+        Tmin: 1150
+        Tmax: 1150
+        default: true
+        uncertainty: 30%
+        comment: "Tab. 1 p. 1189"
+  30-70:
+    M: 0.06755212
+    Tm: null
+    Tb: null
+    density:
+      Waxetal2011:
+        D1: 4.73
+        equation: Linstrom1992DP
+        Tmin: 1073
+        Tmax: 1073
+        default: true
+        comment: "Tab. 1 p. 2, ab initio simulation"
+  43-57:
+    M: 0.09381737
+    Tm: null
+    Tb: null
+    density:
+      Waxetal2011:
+        D1: 6.45
+        equation: Linstrom1992DP
+        Tmin: 1073
+        Tmax: 1073
+        default: true
+        comment: "Tab. 1 p. 2, ab initio simulation"
+  70-30:
+    M: 0.14836828
+    Tm: null
+    Tb: null
+    density:
+      Waxetal2011:
+        D1: 8.28
+        equation: Linstrom1992DP
+        Tmin: 673
+        Tmax: 673
+        default: true
+        comment: "Tab. 1 p. 2, ab initio simulation"
+Bi-Na:
+  50-50:
+    M: 0.11598508
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00120002E+03
+        a2: 6606.8
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 815.15
+        Tmax: 1067.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. II"
+  60-40:
+    M: 0.13458415
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00116893E+03
+        a2: 7381.04
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 706.15
+        Tmax: 1072.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. II"
+  70-30:
+    M: 0.15318321
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00108887E+03
+        a2: 8181.5
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 703.15
+        Tmax: 1067.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. II"
+  80-20:
+    M: 0.17178227
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00128765E+03
+        a2: 9204.42
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 595.15
+        Tmax: 1074.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. II"
+  90-10:
+    M: 0.19038134
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00145519E+03
+        a2: 10088.0
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 583.15
+        Tmax: 1142.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. II"
+  100-0:
+    M: 0.20898040
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00129126E+03
+        a2: 10754.8
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 565.15
+        Tmax: 1069.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. II"
+Li-Pb:
+  0-100:
+    M: 0.2072
+    Tb: null
+    Tm: &Tm_Li_Pb_0_100 600.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_0_100
+        Tmax: 829.15
+        Tmin: 636.15
+        comment: Tab. 2, p. 48
+        equation: Steinberg1974
+        lambda: 1.35
+        rho_m: 10660.0
+      SaarRuppersberg1987:
+        Tm: 600.00
+        Tmax: 1076.0
+        Tmin: 641.12
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.35
+        rho_m: 10660.0
+  100-0:
+    M: 0.006939999999999999
+    Tb: null
+    Tm: &Tm_Li_Pb_100_0 453.15
+    density:
+      Khairulinetal2017:
+        Tm: 454.10
+        Tmax: 972.0
+        Tmin: 454.0
+        comment: Tab. 1, p. 5
+        equation: Steinberg1974
+        lambda: 0.093
+        rho_m: 513.2
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_100_0
+        Tmax: 923.15
+        Tmin: 521.15
+        comment: Tab. 2, p. 48
+        equation: Steinberg1974
+        lambda: 0.11000000000000001
+        rho_m: 514.0
+      SaarRuppersberg1987:
+        Tm: 454.00
+        Tmax: 924.3199999999999
+        Tmin: 520.16
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.11000000000000001
+        rho_m: 514.0
+  15.7-84.3:
+    M: 0.17575918000000001
+    Tb: null
+    Tm: &Tm_Li_Pb_K_15_7_84_3 507.90
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_15_7_84_3
+        Tmax: 997.0
+        Tmin: 508.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.229
+        rho_m: 9957.6
+  17-83:
+    M: 0.1731558
+    Tb: null
+    Tm: &Tm_Li_Pb_K_17_83 510.00
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_17_83
+        Tmax: 1001.0
+        Tmin: 510.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.238
+        rho_m: 9868.8
+  20-80:
+    M: 0.167148
+    Tb: null
+    Tm: &Tm_Li_Pb_20_80 533.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_20_80
+        Tmax: 926.15
+        Tmin: 764.15
+        comment: Tab. 2, p. 48
+        equation: Steinberg1974
+        lambda: 0.7000000000000001
+        rho_m: 9330.0
+      SaarRuppersberg1987:
+        Tm: 535.00
+        Tmax: 1087.52
+        Tmin: 620.96
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.47
+        rho_m: 9640.0
+  30-70:
+    M: 0.147122
+    Tb: null
+    Tm: &Tm_Li_Pb_30_70 623.15
+    density:
+      Khairulinetal2017:
+        Tm: 633.20
+        Tmax: 1001.0
+        Tmin: 633.0
+        comment: Tab. 1, p. 5
+        equation: Steinberg1974
+        lambda: 1.172
+        rho_m: 8797.0
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_30_70
+        Tmax: 917.15
+        Tmin: 806.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.78
+        rho_m: 8650.0
+  39.8-60.2:
+    M: 0.127556598
+    Tb: null
+    Tm: &Tm_Li_Pb_K_39_8_60_2 714.50
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_39_8_60_2
+        Tmax: 998.0
+        Tmin: 715.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.126
+        rho_m: 7966.1
+  40-60:
+    M: 0.127096
+    Tb: null
+    Tm: &Tm_Li_Pb_40_60 703.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_40_60
+        Tmax: 957.15
+        Tmin: 738.15
+        comment: Tab. 2, p. 48
+        equation: Steinberg1974
+        lambda: 0.76
+        rho_m: 7820.0
+      SaarRuppersberg1987:
+        Tm: 695.00
+        Tmax: 1124.96
+        Tmin: 734.24
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.1400000000000001
+        rho_m: 7950.0
+  48.8-51.2:
+    M: 0.10937298999999999
+    Tb: null
+    Tm: &Tm_Li_Pb_SR_48_8_51_2 750.00
+    density:
+      SaarRuppersberg1987:
+        Tm: *Tm_Li_Pb_SR_48_8_51_2
+        Tmax: 1190.24
+        Tmin: 835.04
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.3
+        rho_m: 7110.0
+  49.8-50.2:
+    M: 0.10737039
+    Tb: null
+    Tm: &Tm_Li_Pb_K_49_8_50_2 757.10
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_49_8_50_2
+        Tmax: 1000.0
+        Tmin: 757.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.107
+        rho_m: 7093.3
+  50-50:
+    M: 0.10706999999999998
+    Tb: null
+    Tm: &Tm_Li_Pb_50_50 755.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_50_50
+        Tmax: 965.15
+        Tmin: 770.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.6400000000000001
+        rho_m: 6970.0
+  53.4-46.6:
+    M: 0.10036128999999999
+    Tb: null
+    Tm: &Tm_Li_Pb_K_53_4_46_6 755.10
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_53_4_46_6
+        Tmax: 992.0
+        Tmin: 755.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.107
+        rho_m: 6775.7
+  56.9-43.1:
+    M: 0.093212008
+    Tb: null
+    Tm: &Tm_Li_Pb_K_56_9_43_1 742.20
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_56_9_43_1
+        Tmax: 996.0
+        Tmin: 742.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.082
+        rho_m: 6436.9
+  59.9-40.1:
+    M: 0.08724426000000002
+    Tb: null
+    Tm: &Tm_Li_Pb_SR_59_9_40_1 745.00
+    density:
+      Khairulinetal2017:
+        Tm: 783.00
+        Tmax: 1000.0
+        Tmin: 783.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.065
+        rho_m: 6096.1
+      SaarRuppersberg1987:
+        Tm: *Tm_Li_Pb_SR_59_9_40_1
+        Tmax: 1113.44
+        Tmin: 752.48
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.1800000000000002
+        rho_m: 6240.0
+  60-40:
+    M: 0.087044
+    Tb: null
+    Tm: &Tm_Li_Pb_60_40 743.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_60_40
+        Tmax: 945.15
+        Tmin: 793.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.7000000000000001
+        rho_m: 6080.0
+  61.8-38.2:
+    M: 0.08345934599999999
+    Tb: null
+    Tm: &Tm_Li_Pb_K_61_8_38_2 823.40
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_61_8_38_2
+        Tmax: 1006.0
+        Tmin: 823.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.053
+        rho_m: 5862.4
+  69.4-30.6:
+    M: 0.06811943
+    Tb: null
+    Tm: &Tm_Li_Pb_SR_69_4_30_6 905.00
+    density:
+      SaarRuppersberg1987:
+        Tm: *Tm_Li_Pb_SR_69_4_30_6
+        Tmax: 1209.44
+        Tmin: 921.44
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.1500000000000001
+        rho_m: 4980.0
+  69.8-30.2:
+    M: 0.06731838999999999
+    Tb: null
+    Tm: &Tm_Li_Pb_K_69_8_30_2 925.10
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_69_8_30_2
+        Tmax: 1013.0
+        Tmin: 925.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 0.996
+        rho_m: 4866.6
+  70-30:
+    M: 0.06701800000000001
+    Tb: null
+    Tm: &Tm_Li_Pb_70_30 915.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_70_30
+        Tmax: 1050.15
+        Tmin: 936.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.7200000000000001
+        rho_m: 4860.0
+  74.9-25.1:
+    M: 0.05720526000000001
+    Tb: null
+    Tm: &Tm_Li_Pb_K_74_9_25_1 998.70
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_74_9_25_1
+        Tmax: 1048.0
+        Tmin: 999.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 1.033
+        rho_m: 4176.9
+  75.2-24.8:
+    M: 0.05670461
+    Tb: null
+    Tm: &Tm_Li_Pb_SR_75_2_24_8 975.00
+    density:
+      SaarRuppersberg1987:
+        Tm: *Tm_Li_Pb_SR_75_2_24_8
+        Tmax: 1201.76
+        Tmin: 991.52
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.96
+        rho_m: 4100.0
+  76.9-23.1:
+    M: 0.053180034
+    Tb: null
+    Tm: &Tm_Li_Pb_K_76_9_23_1 1019.70
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_76_9_23_1
+        Tmax: 1049.0
+        Tmin: 1020.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 0.993
+        rho_m: 3891.8
+  77.8-22.2:
+    M: 0.051477824
+    Tb: null
+    Tm: &Tm_Li_Pb_K_77_8_22_2 1021.40
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_77_8_22_2
+        Tmax: 1046.0
+        Tmin: 1021.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 0.991
+        rho_m: 3784.0
+  80-20:
+    M: 0.04703205199999999
+    Tb: null
+    Tm: &Tm_Li_Pb_K_80_20 980.10
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_80_20
+        Tmax: 1044.0
+        Tmin: 980.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 0.927
+        rho_m: 3493.8
+  80.2-19.8:
+    M: 0.04669161
+    Tb: null
+    Tm: &Tm_Li_Pb_SR_80_2_19_8 985.00
+    density:
+      SaarRuppersberg1987:
+        Tm: *Tm_Li_Pb_SR_80_2_19_8
+        Tmax: 1198.88
+        Tmin: 1013.6
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.01
+        rho_m: 3470.0
+  81.9-18.1:
+    M: 0.043106956
+    Tb: null
+    Tm: &Tm_Li_Pb_K_81_9_18_1 922.30
+    density:
+      Khairulinetal2017:
+        Tm: *Tm_Li_Pb_K_81_9_18_1
+        Tmax: 1022.0
+        Tmin: 922.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 0.795
+        rho_m: 3220.2
+  83-17:
+    M: 0.0409842
+    Tb: null
+    Tm: &Tm_Li_Pb_83_17 913.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_83_17
+        Tmax: 1045.15
+        Tmin: 942.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.66
+        rho_m: 3130.0
+  85-15:
+    M: 0.036979000000000005
+    Tb: null
+    Tm: &Tm_Li_Pb_85_15 893.15
+    density:
+      Khairulinetal2017:
+        Tm: 881.00
+        Tmax: 1003.0
+        Tmin: 881.0
+        comment: Tab. 1, p. 5
+        default: true
+        equation: Steinberg1974
+        lambda: 0.609
+        rho_m: 2735.9
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_85_15
+        Tmax: 1036.15
+        Tmin: 921.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.51
+        rho_m: 2790.0
+  85.2-14.8:
+    M: 0.03667861
+    Tb: null
+    Tm: &Tm_Li_Pb_SR_85_2_14_8 900.00
+    density:
+      SaarRuppersberg1987:
+        Tm: *Tm_Li_Pb_SR_85_2_14_8
+        Tmax: 1196.96
+        Tmin: 913.76
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.7000000000000001
+        rho_m: 2670.0
+  90-10:
+    M: 0.026966
+    Tb: null
+    Tm: &Tm_Li_Pb_90_10 823.15
+    density:
+      Khairulinetal2017:
+        Tm: 821.40
+        Tmax: 1001.0
+        Tmin: 821.0
+        comment: Tab. 1, p. 5
+        equation: Steinberg1974
+        lambda: 0.408
+        rho_m: 1971.3
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_90_10
+        Tmax: 1015.15
+        Tmin: 855.15
+        comment: Tab. 2, p. 48
+        equation: Steinberg1974
+        lambda: 0.27999999999999997
+        rho_m: 1980.0
+      SaarRuppersberg1987:
+        Tm: 840.0
+        Tmax: 1159.52
+        Tmin: 853.28
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.49000000000000005
+        rho_m: 1960.0
+  93-7:
+    M: 0.020958199999999996
+    Tb: null
+    Tm: &Tm_Li_Pb_93_7 788.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_93_7
+        Tmax: 994.15
+        Tmin: 820.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.21000000000000002
+        rho_m: 1520.0
+  95-5:
+    M: 0.016953
+    Tb: null
+    Tm: &Tm_Li_Pb_95_5 753.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_95_5
+        Tmax: 985.15
+        Tmin: 801.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.21000000000000002
+        rho_m: 1221.0
+  97-3:
+    M: 0.012947799999999999
+    Tb: null
+    Tm: &Tm_Li_Pb_97_3 693.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_97_3
+        Tmax: 979.15
+        Tmin: 769.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.13999999999999999
+        rho_m: 929.0
+  98-2:
+    M: 0.010945199999999999
+    Tb: null
+    Tm: &Tm_Li_Pb_98_2 613.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_98_2
+        Tmax: 975.15
+        Tmin: 754.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.13999999999999999
+        rho_m: 787.0
+  99-1:
+    M: 0.0089426
+    Tb: null
+    Tm: &Tm_Li_Pb_99_1 453.15
+    density:
+      RuppersbergSpeicher1976:
+        Tm: *Tm_Li_Pb_99_1
+        Tmax: 937.15
+        Tmin: 697.15
+        comment: Tab. 2, p. 48
+        default: true
+        equation: Steinberg1974
+        lambda: 0.11000000000000001
+        rho_m: 658.0
+Li-Sn:
+  20-80:
+    M: 0.09635600 
+    Tb: null
+    Tm: null
+    density:
+      delRioetal2019:
+        a1: -0.000576061E+03
+        a2: 6.4663E+03
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 669
+        Tmax: 970
+        default: true
+        comment: "fit to del Rio et al. (2019) Fig. 1 calculation for Li20Sn80"
+  30-70:
+    M: 0.08517900
+    Tb: null
+    Tm: null
+    density:
+      delRioetal2019:
+        a1: -0.000564773E+03
+        a2: 5.98055E+03
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 669
+        Tmax: 970
+        default: true
+        comment: "fit to del Rio et al. (2019) Fig. 1 calculation for Li20Sn80"
+Na-Pb:
+  0-100:
+    M: 0.20720000
+    Tm: &Tm_Na_Pb_RJ_0_100 600.0
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00120318E+03
+        a2: 11.3867E+03
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 646.15
+        Tmax: 1012.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. I"
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_0_100
+        Tmax: 1300.0
+        Tmin: 600.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        equation: Steinberg1974
+        lambda: 1.35
+        rho_m: 10660.0
+  10-90:
+    M: 0.18877898
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.000971761E+03
+        a2: 10.434E+03
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 659.15
+        Tmax: 1041.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. I"
+  20-80:
+    M: 0.17035795
+    Tm: &Tm_Na_Pb_RJ_20_80 580.0
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.000881249E+03
+        a2: 9.35115E+03
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 635.15
+        Tmax: 1015.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. I"
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_20_80
+        Tmax: 1115.0
+        Tmin: 620.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        equation: Steinberg1974
+        lambda: 1.27
+        rho_m: 8900.0
+  28-72:
+    M: 0.15562113560000002
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_28_72 593.0
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_28_72
+        Tmax: 1120.0
+        Tmin: 630.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.27
+        rho_m: 8130.000000000001
+  30-70:
+    M: 0.15193693
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00100877E+03
+        a2: 8.47332E+03
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 614.15
+        Tmax: 971.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. I"
+  38-62:
+    M: 0.1372001126
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_38_62 573.0
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_38_62
+        Tmax: 1115.0
+        Tmin: 605.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.17
+        rho_m: 7220.0
+  41-59:
+    M: 0.13167381
+    Tm: null
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00090327E+03
+        a2: 7.36429E+03
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 626.15
+        Tmax: 966.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. I"
+  50-50:
+    M: 0.11509488
+    Tm: &Tm_Na_Pb_RJ_50_50 645.0
+    Tb: null
+    density:
+      Hessonetal1968:
+        a1: -0.00106183E+03
+        a2: 6.60353E+03
+        equation: DoboszGancarz2018  # rho = a1 * T + a2
+        Tmin: 660.15
+        Tmax: 947.15
+        default: true
+        comment: "fit to Hesson et al. (1968) Tab. I"
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_50_50
+        Tmax: 1120.0
+        Tmin: 660.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        equation: Steinberg1974
+        lambda: 1.1500000000000001
+        rho_m: 5950.0
+  59-41:
+    M: 0.09851596430000001
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_59_41 606.0
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_59_41
+        Tmax: 1115.0
+        Tmin: 630.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.1500000000000001
+        rho_m: 5060.0
+  65-35:
+    M: 0.0874633505
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_65_35 665.0
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_65_35
+        Tmax: 1065.0
+        Tmin: 670.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 1.0
+        rho_m: 4340.0
+  69-31:
+    M: 0.0800949413
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_69_31 677.0
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_69_31
+        Tmax: 1090.0
+        Tmin: 685.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.8800000000000001
+        rho_m: 3930.0
+  80-20:
+    M: 0.059831816
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_80_20 659.0
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_80_20
+        Tmax: 1130.0
+        Tmin: 660.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.63
+        rho_m: 2705.0
+  90-10:
+    M: 0.041410792999999994
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_90_10 600.0
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_90_10
+        Tmax: 1115.0
+        Tmin: 620.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.49500000000000005
+        rho_m: 1735.0
+  95-5:
+    M: 0.032200281500000004
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_95_5 550.0
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_95_5
+        Tmax: 1035.0
+        Tmin: 570.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.28500000000000003
+        rho_m: 1305.0
+  100-0:
+    M: 0.02298977
+    Tb: null
+    Tm: &Tm_Na_Pb_RJ_100_0 369.5
+    density:
+      RuppersbergJost1989:
+        Tm: *Tm_Na_Pb_RJ_100_0
+        Tmax: 800.0
+        Tmin: 380.0
+        comment: Tab. 1, p. 308; Tmin, Tmax Fig. 1, p. 307
+        default: true
+        equation: Steinberg1974
+        lambda: 0.225
+        rho_m: 927.0
+Mg-Sb:
+  0-100:
+    Tm: null
+    Tb: null
+    M: &M_Mg_Sb_0_100 121.760E-03
+    density:
+      Hansenetal1990:
+        a: 1.613E-03
+        b: 17.712
+        M: *M_Mg_Sb_0_100
+        equation: Hansenetal1990
+        Tmin: 918.15
+        Tmax: 1171.15
+        default: true
+        comment: "Tab. I and Tab. II, p. 154, 155"
+  10-90:
+    Tm: null
+    Tb: null
+    M: &M_Mg_Sb_10_90 0.11201450
+    density:
+      Hansenetal1990:
+        a: 1.532E-03
+        b: 17.465
+        M: *M_Mg_Sb_10_90
+        equation: Hansenetal1990
+        Tmin: 980.15
+        Tmax: 1230.15
+        default: true
+        comment: "Tab. I and Tab. II, p. 154, 155"
+  20-80:
+    Tm: null
+    Tb: null
+    M: &M_Mg_Sb_20_80 0.10226900
+    density:
+      Hansenetal1990:
+        a: 1.491E-03
+        b: 17.145
+        M: *M_Mg_Sb_20_80
+        equation: Hansenetal1990
+        Tmin: 978.15
+        Tmax: 1226.15
+        default: true
+        comment: "Tab. I and Tab. II, p. 154, 155"
+  30-70:
+    Tm: null
+    Tb: null
+    M: &M_Mg_Sb_30_70 0.09252350
+    density:
+      Hansenetal1990:
+        a: 1.474E-03
+        b: 16.312
+        M: *M_Mg_Sb_30_70
+        equation: Hansenetal1990
+        Tmin: 1076.15
+        Tmax: 1231.15
+        default: true
+        comment: "Tab. I and Tab. II, p. 154, 155; Tab. II;
+        composition in error"
+  40-60:
+    Tm: null
+    Tb: null
+    M: &M_Mg_Sb_40_60 0.08277800
+    density:
+      Hansenetal1990:
+        a: 2.240E-03
+        b: 15.044
+        M: *M_Mg_Sb_40_60
+        equation: Hansenetal1990
+        Tmin: 1080.15
+        Tmax: 1227.15
+        default: true
+        comment: "Tab. I and Tab. II, p. 154, 155; Tab. II"
+  80-20:
+    Tm: null
+    Tb: null
+    M: &M_Mg_Sb_80_20 0.04379600
+    density:
+      Hansenetal1990:
+        a: 2.427E-03
+        b: 13.826
+        M: *M_Mg_Sb_80_20
+        equation: Hansenetal1990
+        Tmin: 1154.15
+        Tmax: 1268.15
+        default: true
+        comment: "Tab. I and Tab. II, p. 154, 155; Tab. II"
+  90-10:
+    Tm: null
+    Tb: null
+    M: &M_Mg_Sb_90_10 0.03405050
+    density:
+      Hansenetal1990:
+        a: 2.354E-03
+        b: 13.789
+        M: *M_Mg_Sb_90_10
+        equation: Hansenetal1990
+        Tmin: 1078.15
+        Tmax: 1225.15
+        default: true
+        comment: "Tab. I and Tab. II, p. 154, 155; Tab. II"
+  100-0:
+    Tm: null
+    Tb: null
+    M: &M_Mg_Sb_100_0 0.02430500
+    density:
+      Hansenetal1990:
+        a: 2.226E-03
+        b: 14.197
+        M: *M_Mg_Sb_100_0
+        equation: Hansenetal1990
+        Tmin: 943.15
+        Tmax: 1179.15
+        default: true
+        comment: "Tab. I and Tab. II, p. 154, 155; Tab. II"
+...

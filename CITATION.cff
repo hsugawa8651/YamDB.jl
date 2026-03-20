@@ -1,0 +1,32 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the Julia port and the original Python package."
+title: "YamDB.jl"
+type: software
+license: MIT
+authors:
+  - family-names: Sugawara
+    given-names: Hiroharu
+repository-code: "https://github.com/YOUR/YamDB.jl"
+keywords:
+  - thermophysical properties
+  - liquid metals
+  - molten salts
+  - materials database
+  - Julia
+references:
+  - type: software
+    title: "yamdb"
+    authors:
+      - family-names: Weier
+        given-names: Tom
+    doi: "10.14278/rodare.2549"
+    license: MIT
+    repository-code: "https://codebase.helmholtz.cloud/prosa/yamdb"
+  - type: article
+    title: "yamdb – Yet Another (Molten) Materials Database"
+    authors:
+      - family-names: Weier
+        given-names: Tom
+    doi: "10.5334/jors.493"
+    journal: "Journal of Open Research Software"
+    year: 2024

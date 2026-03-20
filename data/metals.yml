@@ -1,0 +1,4609 @@
+---
+Ag:
+  Tm: &Tm_Ag 1233.65
+  Tb: 2253.15
+  M: 107.868E-03
+  density:
+    IidaGuthrie1988: &density_Ag_IidaGuthrie1988
+      rho_m: 9330
+      lambda: .91
+      default: true
+      equation: Steinberg1974
+    Lide2005:
+      Tmax: 1773.15
+      Tmin: 1234.93
+      Tref: 1234.93
+      c1: 9320.0
+      c2: 0.9
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+    Assaeletal2012a:
+      c1: 9294
+      c2: 0.877
+      Tref: 1234.93
+      Tmin: 1235
+      Tmax: 1600
+      uncertainty: 0.9%
+      equation: Assaeletal2012
+      comment: "p. 167 Eq (1) Tab. 6"
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.5885
+      B: 20.34
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.453
+      B: 22.2
+      equation: Hirai1992
+      comment: "Vol. II p. 531 Tab. 17.9a"
+    Assaeletal2012a:
+      a1: 0.258
+      a2: 1081.8
+      Tmin: 1235
+      Tmax: 1500
+      equation: Assaeletal2012
+      uncertainty: 3.8%
+      comment: "p. 177, Eq. (2), Tab. 13"
+  expansion_coefficient:
+    IidaGuthrie1988: *density_Ag_IidaGuthrie1988
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 30.54
+      Tmin: *Tm_Ag
+      Tmax: 1600
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie1988:
+      alpha: 0.0090E-08
+      beta: 6.2E-08
+      equation: CusackEnderby1960
+      default: true
+    IidaGuthrie2015:
+      alpha: 8.78823E-11
+      beta: 6.40261E-08
+      Tmin: 1233.75
+      Tmax: 1673.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 540/541, Tab. 17.11/GT, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 3237
+      B: -0.394
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 926
+      b: -0.22
+      c: -1234.95  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 955
+      b: -0.31
+      c: -1233.15
+      equation: IAEA2008
+      comment: "p. 183"
+    MillsSu2006:
+      a: 926
+      b: -0.22
+      c: -1233.0
+      equation: IAEA2008
+      comment: "p. 332, Tab. 1 Adopted value (table footnote)"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 122.293
+      b: 0.0425884
+      Tmin: 1233.75
+      Tmax: 1673.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 540/541, Tab. 17.11, linear fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.752
+      B: -13827
+      C: 0
+      equation: IidaGuthrie2015
+      default: true
+      Tmin: *Tm_Ag
+      Tmax: 1600
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 3.8
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 3.51
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Al:
+  Tm: &Tm_Al 933.35
+  Tb: 2333.15
+  M: 26.98154E-03
+  density:
+    IidaGuthrie1988: &density_Al_IidaGuthrie1988
+      rho_m: 2380
+      lambda: .35
+      default: true
+      equation: Steinberg1974
+    Assaeletal2006:
+      c1: 2377.23
+      c2: 0.311
+      Tref: 933.47
+      Tmin: 933
+      Tmax: 1190
+      equation: Assaeletal2012
+      reference: Assaeletal2006
+      comment: "p. 289, Eq. (1)"
+    Lide2005:
+      Tmax: 1613.15
+      Tmin: 933.47
+      Tref: 933.47
+      c1: 2375.0
+      c2: 0.233
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.2565
+      B: 13.08
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.2565
+      B: 13.08
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2006:
+      a1: 0.7324
+      a2: 803.49
+      Tmin: 933
+      Tmax: 1270
+      equation: Assaeletal2012
+      reference: Assaeletal2006
+      comment: "p. 295, Eq. (19)"
+  expansion_coefficient:
+    IidaGuthrie1988: *density_Al_IidaGuthrie1988
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 31.8
+      Tmin: *Tm_Al
+      Tmax: 2400
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie1988:
+      alpha: 0.0145E-08
+      beta: 10.7E-08
+      default: true
+      equation: CusackEnderby1960
+    IidaGuthrie2015GT:
+      alpha: 1.46846E-10
+      beta: 1.0543E-07
+      Tmin: 933.15
+      Tmax: 1273.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 535, Tab. 17.11/GT, linear fit to data"
+    IidaGuthrie2015KM:
+      alpha: 9.12104E-11
+      beta: 1.1506E-07
+      Tmin: 933.15
+      Tmax: 1173.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 535, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 5122
+      B: -0.474
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 1050
+      b: -0.25
+      c: -933.45  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 871
+      b: -0.155
+      c: -933.15
+      equation: IAEA2008
+      comment: "p. 169, mean gamma-t relation"
+    MillsSu2006:
+      a: 1050
+      b: -0.25
+      c: -933.0
+      equation: IAEA2008
+      comment: "p. 333, Tab. 3 Adopted value (table footnote)"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 62.9989
+      b: 0.0332738
+      Tmin: 933.15
+      Tmax: 1273.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 535, Tab. 17.11, linear fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.911
+      B: -16211
+      C: 0
+      equation: IidaGuthrie2015
+      default: true
+      Tmin: *Tm_Al
+      Tmax: 1800
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 6.0
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 6.9
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+As:
+  Tm: 1090.15
+  Tb: 889.15  # sublimation point IidaGuthrie1988
+  M: 74.9216E-03
+  density:
+    IidaGuthrie1988: &density_As_IidaGuthrie1988
+      rho_m: 5220
+      lambda: .54
+      default: true
+      equation: Steinberg1974
+    Lide2005:
+      Tmin: 1090.15
+      Tref: 1090.15
+      c1: 5220.0
+      c2: 0.544
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  expansion_coefficient:
+    IidaGuthrie1988: *density_As_IidaGuthrie1988
+  resistivity:
+    IidaGuthrie2015:
+      value: 2.10E-06
+      Tmin: 1090.15
+      Tmax: 1090.15
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 535, Tab. 17.11/GT"
+      equation: constant
+Au:
+  Tm: &Tm_Au 1336.15
+  Tb: 2983.15
+  M: 196.9665E-03
+  density:
+    IidaGuthrie1988: &density_Au_IidaGuthrie1988
+      rho_m: 17400
+      lambda: 1.45
+      default: true
+      equation: Steinberg1974
+    Lide2005:
+      Tmax: 1473.15
+      Tmin: 1337.33
+      Tref: 1337.33
+      c1: 17310.0
+      c2: 1.343
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 1.099
+      B: 17.62
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 1.099
+      B: 17.62
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie1988: *density_Au_IidaGuthrie1988
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 29.29
+      Tmin: *Tm_Au
+      Tmax: 1600
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+    IidaGuthrie2015:
+      cp_0: 50.33
+      a: -12.69E-03  # T
+      b: 0  # T^2
+      c: 0  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    IidaGuthrie1988:
+      alpha: 0.014E-08
+      beta: 12.5E-08
+      default: true
+      equation: CusackEnderby1960
+    IidaGuthrie2015:
+      alpha: 1.50499E-10
+      beta: 1.11036E-07
+      Tmin: 1336.15
+      Tmax: 1673.15
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11/GT, linear fit to data"
+      equation: CusackEnderby1960
+  sound_velocity:
+    Blairs2007:
+      A: 3331
+      B: -0.571
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 1150
+      b: -0.15
+      c: -1337.35  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 1162
+      b: -0.18
+      c: -1338.15
+      equation: IAEA2008
+      comment: "p. 175, suggested relation pure Au"
+    MillsSu2006:
+      a: 1150
+      b: -0.15
+      c: -1338.0
+      equation: IAEA2008
+      comment: "p. 334, Tab. 4 Adopted value (table footnote)"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 68.4
+      b: 0.0269763
+      Tmin: 1336.15
+      Tmax: 1673.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11, linear fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.832
+      B: -18024
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Au
+      Tmax: 2050
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 5.1
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 5.5
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Ba:
+  Tm: &Tm_Ba 1000.15  # the 1263.15 K of IidaGuthrie1988 seem in error
+  Tb: 2170.15  # the 1810.15 K of IidaGuthrie1988 seem in error
+  M: 137.327E-03  # cf. IidaGuthrie2015 p. 8, 508 & Vertex42 periodic tab.
+  density:
+    IidaGuthrie2015: &density_Ba_IidaGuthrie2015
+      rho_m: 3321
+      lambda: .27
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 508"
+    Shpilrainetal1980:
+      c1: 3.67528E+03
+      c2: 0.0003239E+03  # E+03 fits much better to IidaGuthrie2015
+      Tref: 0
+      Tmin: 1039
+      Tmax: 1852
+      equation: Assaeletal2012
+      comment: "p. 1287, Tab. 2; p. 1290 eq. (7)"
+    Hiemstraetal1977:
+      c1: 3.5561E+03
+      c2: 0.299
+      Tref: 273.15
+      Tmin: 1003.15
+      Tmax: 1103.15
+      equation: Assaeletal2012
+      comment: "p. 275"
+    AddisonPulham1962:
+      c1: 3.476E+03
+      c2: 0.214
+      Tref: 273.15
+      Tmin: 1013.15
+      Tmax: 1203.15
+      equation: Assaeletal2012
+      comment: "abstract, p. 3876"
+    BohdanskySchins1968:
+      rho_s: 3.59E+03
+      drhodT: -0.274
+      Tmin: 1414
+      Tmax: 1882
+      equation: Sobolev2011
+      comment: "p. 2335, Tab. 2"
+    Lide2005:
+      Tmax: 1823.15
+      Tmin: 1000.15
+      Tref: 1000.15
+      c1: 3338.0
+      c2: 0.299
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Shpilrainetal1980:
+      a: 0.215E-03
+      b: 0
+      c: 2098
+      Tmin: 1005
+      Tmax: 1767
+      default: true
+      equation: IAEA2008
+      reference: Shpilrainetal1980
+      comment: "p. 1289, Tab. 3; p. 1290 equation in third paragraph from below"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Ba_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 48.1
+      Tmin: *Tm_Ba
+      Tmax: 1125
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+    IidaGuthrie2015:
+      cp_0: 22.84
+      a: 7.82E-03  # T
+      b: 0  # T^2
+      c: 126.78E+05  # T^-2
+      equation: IidaGuthrie2015
+    Shpilrainetal1980:
+      cp_0: 0.3287
+      a: -0.314E-04
+      b: 0
+      c: 0
+      equation: IAEA2008
+      reference: Shpilrainetal1980
+      comment: "p. 1290, last equation"
+  resistivity:
+    IidaGuthrie2015:
+      value: 1.33E-06
+      Tmin: 1000.15
+      Tmax: 1000.15
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 535, Tab. 17.11/GT"
+      equation: constant
+  sound_velocity:
+    Blairs2007:
+      A: 1506
+      B: -0.177
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 273
+      b: -0.072
+      c: -1000.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Shpilrainetal1980:
+      a: 335.70
+      b: -0.06903
+      Tmin: 1039
+      Tmax: 1852
+      equation: Sobolev2011
+      reference: Shpilrainetal1980
+      comment: "p. 1287, Tab. 2; p. 1290 eq. (8)"
+    Keene1993:
+      a: 268
+      b: -0.069
+      c: -977.15
+      equation: IAEA2008
+      comment: "p. 170, Ref. 74"
+    BohdanskySchins1968:
+      a: 351
+      b: -0.075
+      Tmin: 1410
+      Tmax: 1880
+      equation: Sobolev2011
+      comment: "p. 2333, p. 2334 Tab. 1"
+    Addisonetal1963:
+      a: 292
+      b: -0.095
+      c: -273.15
+      Tmin: 993.15
+      Tmax: 1276.15
+      equation: IAEA2008
+      comment: "p. 1230"
+    MillsSu2006:
+      a: 273
+      b: -0.072
+      c: -1000.0
+      equation: IAEA2008
+      comment: "p. 333"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 4.007
+      B: -8163
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Ba
+      Tmax: 1200
+Bi:
+  Tm: &Tm_Bi 544.10
+  Tb: &Tb_Bi 1833.15
+  M: 208.9804E-03
+  density:
+    IidaGuthrie1988: &density_Bi_IidaGuthrie1988  # ~ identical
+      rho_m: 10050  # to IidaGuthrie2015 p. 508
+      lambda: 1.18
+      default: true
+      equation: Steinberg1974
+    Sobolev2011:
+      rho_s: 10725
+      drhodT: -1.22
+      equation: Sobolev2011
+    Lide2005:
+      Tmax: 1073.15
+      Tmin: 544.55
+      Tref: 544.55
+      c1: 10050.0
+      c2: 1.35
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+    Assaeletal2012a:
+      c1: 10028
+      c2: 1.213
+      Tref: 544.55
+      Tmin: 545
+      Tmax: 1500
+      uncertainty: 0.6%
+      equation: Assaeletal2012
+      comment: "p. 167 Eq (1) Tab. 6"
+  dynamic_viscosity:
+    Lucas1984b:
+      a: 4.456E-04
+      b: 0
+      c: 780
+      Tmin: *Tm_Bi
+      Tmax: 1300
+      equation: IAEA2008
+      reference: OECDNEA2015
+      default: true
+    Hirai1992:
+      A: 0.5035
+      B: 5.192
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.5035
+      B: 5.192
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2012a:
+      a1: 0.345
+      a2: 321.4
+      Tmin: 545
+      Tmax: 1000
+      equation: Assaeletal2012
+      uncertainty: 12.0%
+      comment: "p. 177, Eq. (2), Tab. 13"
+  expansion_coefficient:
+    IidaGuthrie1988:
+      <<: *density_Bi_IidaGuthrie1988
+      default: false
+    OECDNEA2015:
+      a: 8791
+      default: true
+      equation: OECDNEA2015
+  heat_capacity:
+    Imbeni1998:
+      cp_0: 118.2
+      a: 5.934E-03
+      b: 7.183E+06
+      Tmin: *Tm_Bi
+      Tmax: *Tb_Bi
+      default: true
+      equation: Imbeni1998
+      reference: OECDNEA2015
+      comment: "p. 93, Eq. (2.49)"
+    IidaGuthrie2015:
+      cp_0: 19.04
+      a: 10.38E-03  # T
+      b: -3.97E-06  # T^2
+      c: 20.75E+05  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    IidaGuthrie1988:
+      alpha: 0.0570E-08
+      beta: 99.2E-08
+      default: true
+      equation: CusackEnderby1960
+    IidaGuthrie2015:
+      alpha: 5.91911E-10
+      beta: 9.71636E-07
+      Tmin: 544.15
+      Tmax: 1073.15
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11/KM, linear fit to data"
+      equation: CusackEnderby1960
+    Sobolev2011:
+      alpha: 0.0554E-08
+      beta: 98.96E-08
+      equation: CusackEnderby1960
+  sound_velocity:
+    IidaGuthrie1988:
+      Um: 1620
+      m_dUdT: 0.21
+      equation: linearExperimental
+    BeyerRing1972:
+      Um: 1647
+      m_dUdT: 0.1  # value from the real Beyer Ring (1972), quoted as
+      # '-0.1' in Iida Guthrie (1988), likely misinterpretation of
+      # '\approx 0.1'
+      equation: linearExperimental
+    Blairs2007:  # p. 337 recommended linear law from text
+      A: 1758
+      B: -0.164
+      equation: Blairs2007
+      default: true
+    Blairs2007cubic:  # p. 337 recommended cubic law
+      A: 1720
+      B: -9.199E-02
+      C: -4.628E-05
+      equation: Blairs2007cubic
+      reference: Blairs2007
+    Sobolev2011:
+      A: 1616
+      B: 0.187
+      C: -2.2E-04
+      equation: Blairs2007cubic
+  surface_tension:
+    Sobolev2011:
+      a: 420.8
+      b: -0.081
+      Tmin: *Tm_Bi
+      Tmax: 1400
+      default: true
+      equation: Sobolev2011
+      reference: OECDNEA2015
+      comment: "p. 67, Eq. (2.26)"
+    IidaGuthrie2015:
+      a: 382
+      b: -0.08
+      c: -544.55  # Tm/K
+      equation: IAEA2008
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 389
+      b: -0.097
+      c: -543.15
+      equation: IAEA2008
+      comment: "p. 171, suggested relation pure Bi"
+    Tanakaetal2004:
+      a: 417
+      b: -0.070
+      Tmin: 773
+      Tmax: 873
+      equation: Sobolev2011
+      comment: "taken directly from the abstract"
+    MillsSu2006:
+      a: 382
+      b: -0.08
+      c: -544.0
+      equation: IAEA2008
+      comment: "p. 334, Tab. 5 Adopted value (table footnote)"
+  thermal_conductivity:
+    Touloukian1970b:
+      a: 7.34
+      b: 9.5E-03
+      Tmin: *Tm_Bi
+      Tmax: 1000
+      default: true
+      equation: Touloukian1970b
+      reference: OECDNEA2015
+      comment: "p. 125, Eq. (2.90)"
+    IidaGuthrie2015:
+      a: 15.5
+      b: 0
+      Tmin: 573.15
+      Tmax: 973.15
+      equation: Touloukian1970b
+      comment: "Vol II, p. 535, Tab. 17.11, constant value in temperature range"
+    Assaeletal2017a:
+      c1: 13.19939
+      c2: 0.01147
+      Tm: 544.55
+      Tmin: 545
+      Tmax: 1110
+      equation: Assaeletal2017
+      reference: Assaeletal2017a
+      comment: "p. 033101-6 Eq. (2), Tab. 5"
+  vapour_pressure:
+    Sobolev2011:
+      a: 2.67E+10
+      b: -22858
+      default: true
+      equation: Sobolev2011
+      reference: OECDNEA2015
+      comment: "p. 53, Eq. (2.17)"
+    IidaGuthrie2015:
+      A: 12.35
+      B: -10400
+      C: -1.26
+      unit: mmHg
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Bi
+      Tmax: *Tb_Bi
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: -3.35
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: -3.87
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Ca:
+  Tm: &Tm_Ca 1115.15  # differs from the 1124.15 K in IidaGuthrie1988
+  Tb: &Tb_Ca 1757.15  # differs markedly from the 1513.15 K in IidaGuthrie1988
+  M: 40.078E-03
+  density:
+    IidaGuthrie2015: &density_Ca_IidaGuthrie2015
+      rho_m: 1365
+      lambda: .22
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 508"
+    Shpilrainetal1980:
+      c1: 1.5501E+03
+      c2: 0.0001760E+03  # E+03 fits much better to IidaGuthrie2015
+      Tref: 0
+      Tmin: 1162
+      Tmax: 1840
+      equation: Assaeletal2012
+      comment: "p. 1287, Tab. 2; p. 1290 eq. (7)"
+    Hiemstraetal1977:
+      c1: 1.4931E+03
+      c2: 0.137
+      Tref: 273.15
+      Tmin: 1123.15
+      Tmax: 1223.15
+      equation: Assaeletal2012
+      comment: "p. 275"
+    BohdanskySchins1968:
+      rho_s: 1.631E+03
+      drhodT: -0.221
+      Tmin: 1442
+      Tmax: 1657
+      equation: Sobolev2011
+      comment: "p. 2335, Tab. 2"
+    Lide2005:
+      Tmax: 1757.15
+      Tmin: 1115.15
+      Tref: 1115.15
+      c1: 1378.0
+      c2: 0.23
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.0579
+      B: 27.51
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.0579
+      B: 27.51
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Shpilrainetal1980:
+      a: 0.166E-03
+      b: 0
+      c: 2545
+      Tmin: 1096
+      Tmax: 1763
+      equation: IAEA2008
+      reference: Shpilrainetal1980
+      comment: "p. 1289, Tab. 3; p. 1290 equation in third paragraph from below"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Ca_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 29.29
+      Tmin: *Tm_Ca
+      Tmax: 1757
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015:
+      value: 0.250E-06
+      Tmin: 1138.15
+      Tmax: 1138.15
+      reference: IidaGuthrie2015
+      default: true
+      comment: "Vol II, p. 536, Tab. 17.11/GT"
+      equation: constant
+  sound_velocity:
+    Blairs2007:
+      A: 3528
+      B: -0.495
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 363
+      b: -0.10
+      c: -1115.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Shpilrainetal1980:
+      a: 490.68
+      b: -0.11245
+      Tmin: 1162
+      Tmax: 1840
+      equation: Sobolev2011
+      reference: Shpilrainetal1980
+      comment: "p. 1287, Tab. 2; p. 1290 eq. (8)"
+    Keene1993:
+      a: 364
+      b: -0.112
+      c: -1123.15
+      equation: IAEA2008
+      comment: "p. 172, Ref. 74"
+    BohdanskySchins1968:
+      a: 472
+      b: -0.100
+      Tmin: 1445
+      Tmax: 1655
+      equation: Sobolev2011
+      comment: "p. 2333, p. 2334 Tab. 1"
+    Addisonetal1963:
+      a: 395
+      b: -0.068
+      c: -273.15
+      Tmin: 1153.15
+      Tmax: 1293.15
+      equation: IAEA2008
+      comment: "p. 1231"
+    MillsSu2006:
+      a: 363
+      b: -0.10
+      c: -1115.0
+      equation: IAEA2008
+      comment: "p. 334"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 12.45
+      B: -8920
+      C: -1.39
+      unit: mmHg
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Ca
+      Tmax: *Tb_Ca
+    DeMariaPiacente1974:
+      A: 4.93
+      B: -8550
+      C: 0
+      unit: atm
+      equation: IidaGuthrie2015
+      Tmin: 1126
+      Tmax: 1300
+Cd:
+  Tm: &Tm_Cd 594.05
+  Tb: 1039.15
+  M: 112.411E-03
+  density:
+    IidaGuthrie2015: &density_Cd_IidaGuthrie2015
+      rho_m: 8010
+      lambda: 1.22
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 508"
+    Lide2005:
+      Tmax: 773.15
+      Tmin: 594.22
+      Tref: 594.22
+      c1: 7996.0
+      c2: 1.218
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+    Assaeletal2012:
+      c1: 8008
+      c2: 1.251
+      Tref: 594.219
+      Tmin: 594
+      Tmax: 833
+      uncertainty: 0.6%
+      equation: Assaeletal2012
+      comment: "p. 6 Eq (1) Tab. 2"
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.6438
+      B: 6.698
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.6438
+      B: 6.698
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2012:
+      a1: 0.4239
+      a2: 513.89
+      Tmin: 594
+      Tmax: 833
+      uncertainty: 9.4%
+      equation: Assaeletal2012
+      comment: "p. 13 Eq (2) Tab. 5"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Cd_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 29.71
+      Tmin: *Tm_Cd
+      Tmax: 1100
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015GT:
+      alpha: 8.4613E-11
+      beta: 2.86293E-07
+      Tmin: 594.15
+      Tmax: 873.15
+      equation: CusackEnderby1960
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 535, Tab. 17.11/GT, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 2469.5
+      B: -0.390
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 637
+      b: -0.15
+      c: -594.25  # Tm/K
+      equation: IAEA2008
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 637
+      b: -0.15
+      c: -594.15
+      equation: IAEA2008
+      default: true
+      comment: "p. 171, mean relation"
+    MillsSu2006:
+      a: 637
+      b: -0.15
+      c: -594.0
+      equation: IAEA2008
+      comment: "p. 334, from Keene1993"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 1.18907
+      b: 0.068384
+      Tmin: 594.15
+      Tmax: 873.15
+      equation: Touloukian1970b
+      default: true
+      comment: "Vol II, p. 535/536, Tab. 17.11, linear fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.242
+      B: -5392
+      C: 0
+      unit: atm
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Cd
+      Tmax: 650
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 4.7
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 3.4
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Ce:
+  Tm: &Tm_Ce 1068.15
+  Tb: 3741.15
+  M: 140.115E-03
+  density:
+    IidaGuthrie2015: &density_Ce_IidaGuthrie2015
+      rho_m: 6685
+      lambda: .23
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 508"
+    Lide2005:
+      Tmax: 1733.15
+      Tmin: 1072.15
+      Tref: 1072.15
+      c1: 6550.0
+      c2: 0.71
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.6748
+      B: 13.97
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.6748
+      B: 13.97
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Ce_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 37.70
+      Tmin: *Tm_Ce
+      Tmax: 1500
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015:
+      alpha: 1.05972e-10
+      beta: 1.15561e-06
+      Tmin: 1077.15
+      Tmax: 1473.15
+      reference: IidaGuthrie2015
+      default: true
+      comment: "Vol II, p. 536, Tab. 17.11/GM, linear fit to data"
+      equation: CusackEnderby1960
+  sound_velocity:
+    Blairs2007:
+      A: 1503
+      B: 0.177
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 794
+      b: -0.074
+      c: -1071.15  # Tm/K
+      equation: IAEA2008
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 794
+      b: -0.074
+      c: -1081.15
+      equation: IAEA2008
+      default: true
+      comment: "p. 172, Ref. 103"
+    MillsSu2006:
+      a: 794
+      b: -0.074
+      c: -1081.0
+      equation: IAEA2008
+      comment: "p. 334, upper values from Keene1993"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.611
+      B: -21200
+      C: 0
+      unit: atm
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Ce
+      Tmax: 2450
+  volume_change_fusion:
+    WittenbergDeWitt1972:
+      dV: -1.0
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Co:
+  Tm: 1768.15  # Haynes et al. (2016) p. 4-10
+  Tb: 3200.15  # Haynes et al. (2016) p. 4-10
+  M: 58.933194  # Haynes et al. (2016) p. 1-10
+  density:
+    Assaeletal2012:
+      c1: 7827
+      c2: 0.936
+      Tref: 1768.0
+      Tmin: 1768
+      Tmax: 2500
+      uncertainty: 2.1%
+      equation: Assaeletal2012
+      comment: "p. 6 Eq (1) Tab. 2"
+      default: true
+  dynamic_viscosity:
+    Assaeletal2012:
+      a1: 0.9030
+      a2: 2808.7
+      Tmin: 1768
+      Tmax: 2100
+      uncertainty: 14.0%
+      equation: Assaeletal2012
+      comment: "p. 13 Eq (2) Tab. 5"
+      default: true
+Cs:
+  Tm: &Tm_Cs 301.59  # IidaGuthrie1988 p. 7: 301.65
+  Tb: 944.15  # IidaGuthrie1988 p. 7: 1033.15
+  M: 132.90543E-03
+  density:
+    Ohse1985Exp:
+      a:
+        - 2.02678
+        - -0.61200
+        - -0.20233
+        - 0.84066
+        - -1.10010
+        - 0.60684
+        - -0.12500
+      Tmax: 2050
+      equation: Shpilrain1985
+      reference: Ohse1985
+    Ohse1985Rec:
+      a:
+        - 0.19058924E+01
+        - 0.29801989
+        - -0.28529531E+01
+        - 0.46810162E+01
+        - -0.40361819E+01
+        - 0.17366130E+01
+        - -0.29684317
+      default: true
+      equation: Shpilrain1985
+      reference: Ohse1985
+      comment: "IAEA2008 seems to use the same equation Ohse (1985)
+      is [40] there"
+    IidaGuthrie2015: &density_Cs_IidaGuthrie2015
+      rho_m: 1840
+      lambda: .57
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 508"
+    Lide2005:
+      Tmax: 783.15
+      Tmin: 301.59
+      Tref: 301.59
+      c1: 1843.0
+      c2: 0.556
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.0981
+      B: 4.856
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.1014
+      B: 4.79
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Ohse1985:
+      a: -6.4072
+      b: -0.40767
+      c: 432.75
+      equation: Ohse1985
+      comment: "p. 772, Eq. (12)"
+  expansion_coefficient:
+    IidaGuthrie2015:
+      <<: *density_Cs_IidaGuthrie2015
+      default: true
+  heat_capacity:
+    Ohse1985:
+      C1: 36.519
+      C2: -2.1139E-02
+      C3: 1.5891E-05
+      Tmin: *Tm_Cs
+      Tmax: 1600
+      equation: Ohse1985
+      comment: "p. 426, Eq. (17), Tab. 14"
+      default: true
+    IidaGuthrie1988:
+      cp_mol: 31.88
+      Tmin: *Tm_Cs
+      Tmax: 330
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+    IidaGuthrie2015:
+      cp_0: 29.89
+      a: 0.9E-03  # T
+      b: 0  # T^2
+      c: 2.03E+05  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    Ohse1985:
+      equation: Ohse1985
+      default: true
+      reference: Ohse1985
+      comment: "p. 730, Eq. (36), Tab. 3"
+      Tmin: 301.5  # here full range for limits
+      Tmax: 1500
+      range:  # coefficients for the different ranges
+        # order by increasing Tmax
+        - a: 1.567
+          b: 0.880
+          c: -0.030
+          d: 0.739
+          Tmin: 301.5
+          Tmax: 532.3  # 0.3K more than the original range (otherwise gap)
+        - a: 1.794
+          b: 1.000
+          c: 0.516
+          d: -0.652
+          Tmin: 532.3
+          Tmax: 652.4
+        - a: 1.886
+          b: 1.076
+          c: 0.343
+          d: 4.426
+          Tmin: 652.4
+          Tmax: 1500
+  sound_velocity:
+    Blairs2007:
+      A: 1027.5
+      B: -0.214
+      C: -7.123E-05
+      default: true
+      equation: Blairs2007cubic
+    Ohse1985:
+      Um: 967
+      m_dUdT: 0.3
+      Tm: 302
+      equation: linearExperimental
+      reference: Ohse1985
+      comment: "p. 527, Tab. 1 (Beyer, R. T., The velocity of sound)"
+  surface_tension:
+    IidaGuthrie2015:
+      a: 69.0
+      b: -0.047
+      c: -301.55  # Tm/K
+      equation: IAEA2008
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 69.0
+      b: -0.047
+      c: -301.15
+      equation: IAEA2008
+      default: true
+      comment: "p. 171, mean relation with high data ignored"
+    Ohse1985:
+      a: 70.3
+      b: -0.049
+      c: -301.59  # -&Tm_Cs is not well received by python-yaml
+      equation: IAEA2008
+      comment: "p. 692, Tab. 1"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 3.064
+      b: -0.0364208
+      c: 1.59649
+      Tmin: 301.65
+      Tmax: 1873.15
+      equation: SquareRoot
+      comment: "Vol II, p. 536, Tab. 17.11, fit to data"
+    Ohse1985:
+      a: 7.84042
+      b: -0.0281866
+      c: 1.09596
+      Tmin: 301.7
+      Tmax: 1500
+      equation: SquareRoot
+      default: true
+      comment: "p. 751, fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 4.165
+      B: -3830
+      C: 0
+      equation: IidaGuthrie2015
+      default: true
+      Tmin: *Tm_Cs
+      Tmax: 550
+    Ohse1985:
+      A: 11.0122
+      B: -9011.334
+      C: -0.5448
+      Tmin: 728
+      Tmax: 2045
+      equation: Ohse1985
+      comment: "p. 355, Tab. 6"
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 2.6
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II"
+    WittenbergDeWitt1972:
+      dV: 2.6
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+    DarkenGurry1953:
+      dV: 1.36
+      equation: SchinkeSauerwald1956
+      comment: "p. 126, Tab. 5-3"
+Cu:
+  Tm: &Tm_Cu 1356.15
+  Tb: 2903.15
+  M: 63.546E-03
+  density:
+    IidaGuthrie2015: &density_Cu_IidaGuthrie2015
+      rho_m: 8000
+      lambda: .80
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 508"
+    Assaeletal2010:
+      c1: 7997
+      c2: 0.819
+      Tref: 1357.77
+      Tmin: 1356
+      Tmax: 2500
+      equation: Assaeletal2012
+      reference: Assaeletal2010
+      comment: "p. 033105-4, Eq. (1)"
+    Lide2005:
+      Tmax: 1903.15
+      Tmin: 1357.77
+      Tref: 1357.77
+      c1: 8020.0
+      c2: 0.609
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.5287
+      B: 23.85
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.5287
+      B: 23.85
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2010:
+      a1: 0.4220
+      a2: 1393.4
+      Tmin: 1356
+      Tmax: 1970
+      equation: Assaeletal2012
+      reference: Assaeletal2010
+      comment: "p. 033105-6, Eq. (3)"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Cu_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 31.38
+      Tmin: *Tm_Cu
+      Tmax: 1600
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015GT:
+      alpha: 1.02598E-10
+      beta: 6.09991E-08
+      Tmin: 1356.15
+      Tmax: 1873.15
+      equation: CusackEnderby1960
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 536/537, Tab. 17.11/GT, linear fit to data"
+    IidaGuthrie2015KM:
+      alpha: 8.58159e-11
+      beta: 9.43085e-08
+      Tmin: 1356.15
+      Tmax: 1673.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 536/537, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 4093
+      B: -0.451
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 1320
+      b: -0.28
+      c: -1357.75  # Tm/K
+      equation: IAEA2008
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 1374
+      b: -0.26
+      c: -1358.15
+      equation: IAEA2008
+      default: true
+      comment: "p. 173, suggested relation for pure Cu"
+    MillsSu2006:
+      a: 1320
+      b: -0.28
+      c: -1358.0
+      equation: IAEA2008
+      comment: "p. 336, Tab. 8 Adopted (table footnote)"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 126.458
+      b: 0.029193
+      Tmin: 1356.15
+      Tmax: 1873.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 536/537, Tab. 17.11, linear fit to data"
+    Assaeletal2017:
+      c1: 150.49
+      c2: 0.070410
+      Tm: 1357.77
+      Tmin: 1358
+      Tmax: 1700
+      equation: Assaeletal2017
+      reference: Assaeletal2017
+      comment: "p. 16 Eq. (2), Tab. 8"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.849
+      B: -16415
+      C: 0
+      unit: atm
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Cu
+      Tmax: 1850
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 4.15
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 3.96
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Fe:
+  Tm: &Tm_Fe 1808.15
+  Tb: 3003.15
+  M: 55.847E-03
+  density:
+    IidaGuthrie2015: &density_Fe_IidaGuthrie2015
+      rho_m: 7030
+      lambda: .88
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 508"
+    Assaeletal2006:
+      c1: 7034.96
+      c2: 0.926
+      Tref: 1811.0
+      Tmin: 1809
+      Tmax: 2480
+      equation: Assaeletal2012
+      reference: Assaeletal2006
+      comment: "p. 289, Eq. (2)"
+    Lide2005:
+      Tmax: 1953.15
+      Tmin: 1811.15
+      Tref: 1811.15
+      c1: 6980.0
+      c2: 0.572
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.3147
+      B: 46.48
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.2388
+      B: 47.44
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2006:
+      a1: 0.7209
+      a2: 2694.95
+      Tmin: 1809
+      Tmax: 2480
+      equation: Assaeletal2012
+      reference: Assaeletal2006
+      comment: "p. 295, Eq. (20)"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Fe_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 41.8
+      Tmin: *Tm_Fe
+      Tmax: 1873
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015:
+      value: 1.386E-06
+      Tmin: 1809.15
+      Tmax: 1809.15
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 538, Tab. 17.11/GT"
+      equation: constant
+  sound_velocity:
+    Blairs2007:
+      A: 4876
+      B: -0.499
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 1880
+      b: -0.41
+      c: -1811.15  # Tm/K
+      equation: IAEA2008
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 1909
+      b: -0.52
+      c: -1803.15
+      equation: IAEA2008
+      default: true
+      comment: "p. 176, suggested relation for pure Fe"
+    MillsSu2006:
+      a: 1880
+      b: -0.41
+      c: -1811.0
+      equation: IAEA2008
+      comment: "p. 337, Tab. 9 Adopted (table footnote)"
+  thermal_conductivity:
+    Assaeletal2017:
+      c1: 36.349
+      c2: 0.0096207
+      Tm: 1811
+      Tmin: 1815
+      Tmax: 2050
+      equation: Assaeletal2017
+      default: true
+      reference: Assaeletal2017
+      comment: "p. 16 Eq. (2), Tab. 8"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 6.347
+      B: -19574
+      C: 0
+      unit: atm
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Fe
+      Tmax: 2100
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 2.6
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 3.6
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Ga:
+  Tm: &Tm_Ga 302.930
+  Tb: 2573.15
+  M: 69.72E-03
+  density:
+    IidaGuthrie1988: &density_Ga_IidaGuthrie1988  # practically identical
+      rho_m: 6100  # to IidaGuthrie2015, p. 508
+      lambda: .56
+      default: true
+      equation: Steinberg1974
+    Assaeletal2012:
+      c1: 6077
+      c2: 0.611
+      Tref: 302.914
+      Tmin: 303
+      Tmax: 1500
+      equation: Assaeletal2012
+      comment: "p. 6, Eq. (1), Tab. 2"
+    Lide2005:
+      Tmax: 673.15
+      Tmin: 302.91
+      Tref: 302.91
+      c1: 6080.0
+      c2: 0.62
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Assaeletal2012:
+      a1: 0.4465
+      a2: 204.03
+      Tmin: 304
+      Tmax: 800
+      equation: Assaeletal2012
+      default: true
+      comment: "p. 13, Eq. (2), Tab. 5"
+    Hirai1992:
+      A: 0.6029
+      B: 2.880
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.6209
+      B: 2.880
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie1988: *density_Ga_IidaGuthrie1988
+  heat_capacity:
+    IidaGuthrie2015:
+      cp_mol: 27.7
+      Tmin: 302.85
+      Tmax: 573.15
+      default: true
+      equation: IidaGuthrie1988
+      comment: "Vol. II p. 519 Tab. 17.6a"
+  kinematic_viscosity:
+    IAEA2008:
+      a: 28.6
+      b: 2.0E-02
+      c: 3.27E-06
+      default: true
+      reference: IAEA2008
+      equation: IAEA2008
+      Tmin: 303
+      Tmax: 773
+  resistivity:
+    IidaGuthrie1988:
+      alpha: 0.0195E-08
+      beta: 19.9E-08
+      default: true
+      equation: CusackEnderby1960
+    IidaGuthrie2015GT:
+      alpha: 1.43234E-10
+      beta: 2.15827E-07
+      Tmin: 302.85
+      Tmax: 573.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11/GT, linear fit to data"
+    IidaGuthrie2015KM:
+      alpha: 1.59832E-10
+      beta: 2.12583E-07
+      Tmin: 302.85
+      Tmax: 773.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    IidaGuthrie1988:
+      Um: 2950
+      m_dUdT: 0.28
+      default: true
+      equation: linearExperimental
+    BeyerRing1972:
+      Um: 2873
+      m_dUdT: 0.27
+      equation: linearExperimental
+      reference: IidaGuthrie1988
+    Blairs2007:
+      A: 2800
+      B: -0.288
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 724
+      b: -0.07
+      c: -302.95  # Tm/K
+      equation: IAEA2008
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 724
+      b: -0.072
+      c: -303.15
+      equation: IAEA2008
+      default: true
+      comment: "p. 174, suggested relation pure Ga"
+    Tanakaetal2004:
+      a: 737
+      b: -0.062
+      Tmin: 823
+      Tmax: 993
+      equation: Sobolev2011
+      comment: "taken directly from the abstract"
+    MillsSu2006:
+      a: 724
+      b: -0.07
+      c: -303.0
+      equation: IAEA2008
+      comment: "p. 337, Tab. 10 Adopted (table footnote)"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 10.7751
+      b: 0.0502814
+      Tmin: 302.85
+      Tmax: 573.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11, linear fit to data"
+    Assaeletal2017:
+      c1: 28.403
+      c2: 0.071896
+      Tm: 302.914
+      Tmin: 303
+      Tmax: 850
+      equation: Assaeletal2017
+      reference: Assaeletal2017
+      comment: "p. 16 Eq. (2), Tab. 8"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 6.754
+      B: -13984
+      C: -0.3413
+      equation: IidaGuthrie2015
+      default: true
+      Tmin: *Tm_Ga
+      Tmax: 1600
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: -3.2
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: -2.9
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Hg:
+  Tm: &Tm_Hg 234.28
+  Tb: 629.73
+  M: 200.5E-03
+  density:
+    IidaGuthrie1988: &density_Hg_IidaGuthrie1988
+      rho_m: 13690
+      lambda: 2.42
+      default: true
+      equation: Steinberg1974
+    IidaGuthrie2015: &density_Hg_IidaGuthrie2015
+      rho_m: 13691
+      lambda: 2.436
+      equation: Steinberg1974
+    IAEA2008:
+      rho_0: 13595
+      a: 1
+      b: -1.8144E-04
+      c: -7.016E-09
+      d: -2.8625E-11
+      e: -2.617E-14
+      equation: IAEA2008
+  dynamic_viscosity:
+    IAEA2008:
+      a: 0.31E-03
+      b: 0.07939
+      c: 341.13
+      Tmin: 303
+      Tmax: 773
+      equation: IAEA2008
+      default: true
+    Assaeletal2012:
+      a1: 0.2561
+      a2: 132.29
+      Tmin: 234
+      Tmax: 600
+      equation: Assaeletal2012
+      comment: "p. 13, Eq. (2), Tab. 5"
+    Hirai1992:
+      A: 0.5353
+      B: 2.614
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.5353
+      B: 2.614
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie1988: *density_Hg_IidaGuthrie1988
+    IidaGuthrie2015: *density_Hg_IidaGuthrie2015
+    IAEA2008:
+      a: 1.8144
+      b: 7.016E-05
+      c: 2.8625E-07
+      d: 2.617E-10
+      default: true
+      equation: IAEA2008
+  heat_capacity:
+    IAEA2008:
+      cp_0: 0.1508
+      a: -6.630E-05
+      b: 6.4185E-08
+      c: 0.8049
+      default: true
+      equation: IAEA2008
+      comment: "unit given in source is wrong (kJ instead of J)"
+    IidaGuthrie2015:
+      cp_0: 30.38
+      a: -11.46E-03  # T
+      b: 10.15E-06  # T^2
+      c: 0  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    IidaGuthrie1988:
+      value: 90.96E-08
+      equation: constant
+    Adams1964:
+      a: 77.6055
+      b: 0.0394537
+      c: 6.83143E-05
+      d: 2.5416E-08
+      Tmin: 234.75
+      Tmax: 627.65
+      default: true
+      equation: Desaietal1984
+      comment: "coefficients from fit to the data of Adams' Fig. 8"
+    IAEA2008_8: &IAEA2008_8
+      a: 1
+      b: 0.8896E-03
+      c: 1.0075E-06
+      d: -1.05E-10
+      e: 2.702E-13
+      f: 1.199E-15
+      rho_e0: 0.9407E-06
+      Tmin: 234.15
+      Tmax: 1273.15
+      equation: IAEA2008
+      reference: IAEA2008
+    IAEA2008_6a:
+      <<: *IAEA2008_8
+      rho_e0: 0.9412E-06
+    IidaGuthrie2015GT:
+      a: 7.72224E-07
+      b: 3.56843E-10
+      c: 9.23176E-13
+      Tmin: 234.13
+      Tmax: 773.15
+      equation: Sobolev2011
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 539, Tab. 17.11, quadratic fit to data"
+    IidaGuthrie2015KM:
+      a: 8.35843E-07
+      b: 6.22529E-11
+      c: 1.23401E-12
+      Tmin: 323.15
+      Tmax: 623.15
+      equation: Sobolev2011
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 539, Tab. 17.11, quadratic fit to data"
+  sound_velocity:
+    BeyerRing1972:
+      Um: 1480
+      m_dUdT: 0.45
+      default: true
+      equation: linearExperimental
+    Blairs2007:
+      A: 1559.1
+      B: -0.483
+      equation: Blairs2007
+    IAEA2008:
+      a: 1460
+      b: -7765.6
+      c: -0.4671
+      Tmin: *Tm_Hg
+      Tmax: 473.15
+      equation: IAEA2008
+  surface_tension:
+    IAEA2008:
+      a: 497
+      b: -0.281
+      c: -234
+      equation: IAEA2008
+      default: true
+    IidaGuthrie2015:
+      a: 489
+      b: -0.23
+      c: -234.35  # Tm/K
+      equation: IAEA2008
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 498
+      b: -0.215
+      c: -235.15
+      equation: IAEA2008
+      comment: "p. 178, suggested relation pure Hg"
+  thermal_conductivity:
+    IAEA2008:
+      a: 8.178
+      b: 1.36E-02
+      c: -6.378E-06
+      default: true
+      equation: IAEA2008
+    IidaGuthrie2015:
+      a: -10.3854
+      b: -0.0232105
+      c: 1.47462
+      Tmin: 234.13
+      Tmax: 773.15
+      equation: SquareRoot
+      comment: "Vol II, p. 539, Tab. 17.11, square root fit to data"
+  vapour_pressure:
+    IAEA2008:
+      a: 33.197
+      b: -7765.6
+      c: -1.5337
+      d: 0.864E-03
+      default: true
+      equation: IAEA2008
+    IidaGuthrie2015:
+      A: 5.116
+      B: -3190
+      C: 0
+      equation: IidaGuthrie2015
+      Tmin: 298
+      Tmax: 400
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 3.7
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 3.64
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+In:
+  Tm: &Tm_In 429.55
+  Tb: 2345.15  # 2373.15 K in IidaGuthrie1988
+  M: 114.818E-03
+  density:
+    IidaGuthrie2015: &density_In_IidaGuthrie2015
+      rho_m: 7030
+      lambda: .68
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 509"
+    Lide2005:
+      Tmax: 773.15
+      Tmin: 429.75
+      Tref: 429.75
+      c1: 7020.0
+      c2: 0.836
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+    Assaeletal2012:
+      c1: 7022
+      c2: 0.762
+      Tref: 429.748
+      Tmin: 430
+      Tmax: 1100
+      uncertainty: 0.5%
+      equation: Assaeletal2012
+      comment: "p. 6 Eq (1) Tab. 2"
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.4126
+      B: 5.244
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.4129  # probably 6 instead of 9 (see Hirai 1992)
+      B: 5.244
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2012:
+      a1: 0.3621
+      a2: 272.06
+      Tmin: 429
+      Tmax: 1000
+      uncertainty: 7.3%
+      equation: Assaeletal2012
+      comment: "p. 13 Eq (2) Tab. 5"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_In_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie2015:
+      cp_0: 30.29
+      a: -1.38E-03  # T
+      b: 0  # T^2
+      c: 0  # T^-2
+      default: true
+      equation: IidaGuthrie2015
+  resistivity:
+    IidaGuthrie2015GT:
+      alpha: 4.78868E-10
+      beta: 1.12776E-07
+      Tmin: 429.65
+      Tmax: 673.15
+      equation: CusackEnderby1960
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11/GT, linear fit to data"
+    IidaGuthrie2015KM:
+      alpha: 2.47343E-10
+      beta: 2.17359E-07
+      Tmin: 429.65
+      Tmax: 673.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 2442
+      B: -0.289
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 560
+      b: -0.090
+      c: -429.75  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 561
+      b: -0.095
+      c: -430.15
+      equation: IAEA2008
+      comment: "p. 176, suggested relation pure In"
+    Tanakaetal2004:
+      a: 600
+      b: -0.082
+      Tmin: 673
+      Tmax: 993
+      equation: Sobolev2011
+      comment: "taken directly from the abstract"
+    MillsSu2006:
+      a: 560
+      b: -0.090
+      c: -429.0
+      equation: IAEA2008
+      comment: "p. 339, Tab. 13 Adopted (table footnote)"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 42
+      b: 0
+      Tmin: 429.65
+      Tmax: 429.65
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11, only value at Tm given"
+    Assaeletal2017:
+      c1: 36.493
+      c2: 0.029185
+      Tm: 429.748
+      Tmin: 430
+      Tmax: 1300
+      equation: Assaeletal2017
+      reference: Assaeletal2017
+      comment: "p. 16 Eq. (2), Tab. 8"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.374
+      B: -12276
+      C: 0
+      unit: atm
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_In
+      Tmax: 1500
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 2.7
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 2.6
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+K:
+  Tm: &Tm_K 336.53
+  Tb: 1032.15  # 1029.15 K in IidaGuthrie1988
+  M: 39.0983E-03
+  density:
+    Ohse1985Exp:
+      a:
+        - 0.91474
+        - -0.27731
+        - 0.9814E-01
+        - -0.10186
+        - 0.5179E-01
+        - -0.1216E-01
+      Tmax: 2050
+      equation: Shpilrain1985
+      reference: Ohse1985
+    Ohse1985Rec:  # recommended  equation
+      a:
+        - 0.90281376
+        - -0.16990711
+        - -0.26864769
+        - 0.50568188
+        - -0.46537912
+        - 0.20378107
+        - -0.34771308E-01
+      default: true
+      equation: Shpilrain1985
+      reference: Ohse1985
+      comment: "IAEA2008 seems to use the same equation Ohse (1985)
+      is [40] there"
+    IidaGuthrie2015: &density_K_IidaGuthrie2015
+      rho_m: 827
+      lambda: .24
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 510"
+    Lide2005:
+      Tmax: 773.15
+      Tmin: 336.53
+      Tref: 336.53
+      c1: 828.0
+      c2: 0.232
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.0858
+      B: 5.289
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.0999
+      B: 4.69
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Ohse1985:
+      a: -6.4846
+      b: -0.42903
+      c: 485.32
+      equation: Ohse1985
+      comment: "p. 771, Eq. (10)"
+  expansion_coefficient:
+    IidaGuthrie2015:
+      <<: *density_K_IidaGuthrie2015
+      default: true
+  heat_capacity:
+    Ohse1985:
+      C1: 37.447
+      C2: -2.4063E-02
+      C3: 1.8585E-05
+      Tmin: *Tm_K
+      Tmax: 1600
+      equation: Ohse1985
+      comment: "p. 426, Eq. (17), Tab. 14"
+      default: true
+    IidaGuthrie2015:
+      cp_0: 37.18
+      a: -19.12E-03  # T
+      b: 12.30E-06  # T^2
+      c: 0  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    Ohse1985:
+      equation: Ohse1985
+      default: true
+      reference: Ohse1985
+      comment: "p. 730, Eq. (36), Tab. 3"
+      range:  # coefficients for the different ranges
+        # order by increasing Tmax
+        - a: 1.146
+          b: 1.154
+          c: 0.494
+          d: 0.287
+          Tmin: 336.4
+          Tmax: 1090.3
+        - a: 1.901
+          b: 1.882
+          c: 0.933
+          d: 13.67
+          Tmin: 1090.3
+          Tmax: 1500
+    IidaGuthrie2015GT:
+      a: 9.66462E-09
+      b: 2.29939E-10
+      c: 4.29256E-13
+      Tmin: 336.55
+      Tmax: 773.15
+      equation: Sobolev2011
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 539/540, Tab. 17.11, quadratic fit to data"
+    IidaGuthrie2015KM:
+      alpha: 6.35708E-10
+      beta: -8.2576E-08
+      Tmin: 336.55
+      Tmax: 573.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 539/540, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 2034
+      B: -0.430
+      C: -7.700E-05
+      default: true
+      equation: Blairs2007cubic
+    Ohse1985:
+      Um: 1880
+      m_dUdT: 0.53
+      Tm: 337
+      equation: linearExperimental
+      reference: Ohse1985
+      comment: "p. 527, Tab. 1 (Beyer, R. T., The velocity of sound)"
+  surface_tension:
+    IidaGuthrie2015:
+      a: 110
+      b: -0.07
+      c: -336.55  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 118
+      b: -0.065
+      c: -337.15
+      equation: IAEA2008
+      comment: "p. 180, suggested relation pure K"
+    Ohse1985:
+      a: 113.0
+      b: -0.069
+      c: -336.53  # -&Tm_K is not well received by python-yaml
+      equation: IAEA2008
+      comment: "p. 692, Tab. 1"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 64.526
+      b: -0.0347157
+      Tmin: 336.55
+      Tmax: 773.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 537, Tab. 17.11, only value at Tm given"
+    Ohse1985:
+      a: 75.5685
+      b: -0.0587519
+      c: 1.40155e-05
+      Tmin: 333.5
+      Tmax: 1500
+      equation: Sobolev2011
+      comment: "p. 750, fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 4.402
+      B: -4453
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_K
+      Tmax: 600
+    Ohse1985:
+      A: 13.1559
+      B: -10684.466
+      C: -0.7321
+      Tmin: 718
+      Tmax: 2254
+      equation: Ohse1985
+      comment: "p. 355, Tab. 6"
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 2.55
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II"
+    WittenbergDeWitt1972:
+      dV: 2.54
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+    DarkenGurry1953:
+      dV: 2.68
+      equation: SchinkeSauerwald1956
+      comment: "p. 126, Tab. 5-3"
+La:
+  Tm: &Tm_La 1191.15  # 1193.15 K in IidaGuthrie1988
+  Tb: 3737.15  # 3742.15 K in IidaGuthrie1988
+  M: 138.905E-03
+  density:
+    IidaGuthrie2015: &density_La_IidaGuthrie2015
+      rho_m: 5955
+      lambda: .24
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 509"
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.2092
+      B: 25.22
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.2092
+      B: 25.22
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_La_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie2015:
+      cp_mol: 34.31
+      Tmin: 1191.15
+      Tmax: 1191.15
+      default: true
+      equation: IidaGuthrie1988
+      comment: "Vol. II p. 519 Tab. 17.6a"
+  resistivity:
+    IidaGuthrie2015:
+      alpha: 6.68866E-10
+      beta: 5.77473E-07
+      Tmin: 1203.15
+      Tmax: 1473.15
+      equation: CusackEnderby1960
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 538, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 2115.5
+      B: -0.078
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 728
+      b: -0.10
+      c: -1191.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 728
+      b: -0.10
+      c: -1193.15
+      equation: IAEA2008
+      comment: "p. 177, suggested relation"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 21.0
+      b: 0
+      Tmin: 1203.15
+      Tmax: 1203.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 538, Tab. 17.11, only value at Tm given"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.911
+      B: -21855
+      C: 0
+      unit: atm
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_La
+      Tmax: 2450
+  volume_change_fusion:
+    WittenbergDeWitt1972:
+      dV: 0.6
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Li:
+  Tm: &Tm_Li 453.15  # 452.15 K in IidaGuthrie1988
+  Tb: 1615.15  # 1590.15 K in IidaGuthrie1988
+  M: 6.94E-03
+  density:
+    IidaGuthrie1988: &density_Li_IidaGuthrie1988  # identical to IidaGuthrie2015
+      rho_m: 518
+      lambda: .10
+      equation: Steinberg1974
+    Ohse1985Exp:  # equation describing experiments best
+      a:
+        - 0.55826
+        - -0.9153E-01
+        - -0.286E-02
+      Tmax: 1900
+      equation: Shpilrain1985
+      reference: Ohse1985
+    Ohse1985Rec:  # recommended  equation
+      a:
+        - 0.53799943
+        - -0.16043986E-01
+        - -0.99963362E-01
+        - 0.54609894E-01
+        - -0.15087628E-01
+        - 0.27045593E-02
+        - -0.31537739E-03
+      default: true
+      equation: Shpilrain1985
+      reference: Ohse1985
+      comment: "IAEA2008 seems to use the same equation Ohse (1985)
+      is [40] there"
+    Williamsetal1988:
+      c1: 558.4
+      c2: 0.101
+      Tref: 0.0
+      Tmin: 453.7
+      Tmax: 1700
+      equation: Assaeletal2012
+      comment: "p. 3 and p.25"
+    Lide2005:
+      Tmax: 558.15
+      Tmin: 453.65
+      Tref: 453.65
+      c1: 512.0
+      c2: 0.52
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.1386
+      B: 5.521
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.1386
+      B: 5.52  # 1 forgotten (see Hirai 1992)
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Ohse1985:
+      a: -4.16435
+      b: -0.6374
+      c: 292.131
+      equation: Ohse1985
+      comment: "p. 771, Eq. (8)"
+  expansion_coefficient:
+    IidaGuthrie1988:
+      <<: *density_Li_IidaGuthrie1988
+      default: true
+  heat_capacity:
+    Ohse1985:
+      C1: 32.992
+      C2: -0.64199E-02
+      C3: 0.20166E-05
+      Tmin: *Tm_Li
+      Tmax: 1600
+      equation: Ohse1985
+      comment: "p. 426, Eq. (17), Tab. 14"
+      default: true
+    IidaGuthrie2015:
+      cp_0: 31.21
+      a: -5.27E-03  # T
+      b: 2.64E-06  # T^2
+      c: 2.05E+05  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    Zinkle1998:
+      a: -64.9
+      b: 1.064
+      c: -1.035E-03
+      d: 5.33E-07
+      e: -9.23E-12
+      equation: Zinkle1998  # coefficients for nano Ohm m
+      # converted to Ohm m in method
+      comment: "equation is obviously in error and not identical to Ohse1985"
+    Ohse1985:
+      equation: Ohse1985
+      default: true
+      reference: Ohse1985
+      comment: "p. 730, Eq. (36), Tab. 3"
+      range:  # coefficients for the different ranges
+        # order by increasing Tmax
+        - a: 1.395
+          b: 0.622
+          c: -0.228
+          d: 0.430
+          Tmin: 453.7
+          Tmax: 1080.5
+        - a: 1.620
+          b: 0.634
+          c: 0.258
+          d: 0.314
+          Tmin: 1080.5
+          Tmax: 1500
+    IidaGuthrie2015:
+      alpha: 3.74025E-10
+      beta: 8.7087E-08
+      Tmin: 453.55
+      Tmax: 573.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 538, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    IidaGuthrie2015:  # Vol 2, p. 525 Tab. 17.7
+      Um: 4554
+      m_dUdT: 0.602
+      default: true
+      equation: linearExperimental
+    Blairs2007:  # p.339 suggested c(T) for Li of natural isotopic composition
+      A: 4808.5
+      B: -0.602
+      equation: Blairs2007
+    Ohse1985:
+      Um: 4554
+      m_dUdT: 0.61
+      Tm: 454
+      equation: linearExperimental
+      reference: Ohse1985
+      comment: "p. 527, Tab. 1 (Beyer, R. T., The velocity of sound)"
+  surface_tension:
+    IidaGuthrie2015:
+      a: 399
+      b: -0.15
+      c: -453.65  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 399
+      b: -0.15
+      c: -459.15
+      equation: IAEA2008
+      comment: "p. 177, mean relation"
+    Ohse1985:
+      a: 398.3
+      b: -0.147
+      c: -453.15  # -&Tm_Li is not well received by python-yaml
+      equation: IAEA2008
+      comment: "p. 692, Tab. 1"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: -30.6834
+      b: -0.07775
+      c: 5.27445
+      Tmin: 453.55
+      Tmax: 1873.15
+      equation: SquareRoot
+      comment: "Vol II, p. 538/539, Tab. 17.11, fit to data"
+    Ohse1985:
+      a: -5.02112
+      b: -0.0166059
+      c: 2.5736
+      Tmin: 453.7
+      Tmax: 1500
+      equation: SquareRoot
+      default: true
+      comment: "p. 750, fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.055
+      B: -8023
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Li
+      Tmax: 1000
+    Ohse1985:
+      A: 13.0719
+      B: -18880.659
+      C: -0.4942
+      Tmin: 1057
+      Tmax: 2156
+      equation: Ohse1985
+      comment: "p. 355, Tab. 6"
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 1.65
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II"
+    WittenbergDeWitt1972:
+      dV: 2.74
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Mg:
+  Tm: &Tm_Mg 923.15
+  Tb: &Tb_Mg 1363.15  # 1380.15 K in IidaGuthrie1988
+  M: 24.305E-03
+  density:
+    IidaGuthrie2015: &density_Mg_IidaGuthrie2015
+      rho_m: 1590
+      lambda: .26
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 509"
+    McGonigaletal1962:
+      rho_s: 1.834E+03
+      drhodT: -0.2647
+      Tmin: 923
+      Tmax: 1390
+      equation: Sobolev2011
+      comment: "p. 738, Tab. I"
+    Lide2005:
+      Tmax: 1173.15
+      Tmin: 923.15
+      Tref: 923.15
+      c1: 1584.0
+      c2: 0.234
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    IidaGuthrie2015:
+      A: 0.025
+      B: 30.5
+      equation: Hirai1992
+      default: true
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Mg_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 32.64
+      Tmin: *Tm_Mg
+      Tmax: 1150
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015:
+      alpha: 5.28571E-11
+      beta: 2.25348E-07
+      Tmin: 923.15
+      Tmax: 1073.15
+      equation: CusackEnderby1960
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 539, Tab. 17.11/GT, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 4618
+      B: -0.590
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 577
+      b: -0.26
+      c: -923.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 577
+      b: -0.26
+      c: -923.15
+      equation: IAEA2008
+      comment: "p. 178, mean relation"
+    BohdanskySchins1968:
+      a: 721
+      b: -0.149
+      Tmin: 1125
+      Tmax: 1326
+      equation: Sobolev2011
+      comment: "p. 2333, p. 2334 Tab. 1"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 19.7907
+      b: 0.0631304
+      Tmin: 923.15
+      Tmax: 1273.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 539, Tab. 17.11, linear fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 12.79
+      B: -7550
+      C: -1.41
+      unit: mmHg
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Mg
+      Tmax: *Tb_Mg
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 4.1
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 2.95
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Na:
+  Tm: &Tm_Na 370.87  # 371.05 K in IidaGuthrie1988
+  Tb: 1156.15  # 1150.65 in IidaGuthrie1988
+  M: 22.98977E-03
+  density:
+    IidaGuthrie1988: &density_Na_IidaGuthrie1988  # practically
+      rho_m: 927   # identical to IidaGuthrie2015
+      lambda: .235
+      equation: Steinberg1974
+    Sobolev2011:
+      rho_s: 1014
+      drhodT: -0.235
+      equation: Sobolev2011
+    Ohse1985Exp:
+      a:
+        - 1.01503
+        - -0.23393
+        - -0.305E-02
+      Tmax: 2200
+      equation: Shpilrain1985
+      reference: Ohse1985
+    Ohse1985Rec:  # recommended  equation
+      a:
+        - 0.89660679
+        - 0.51613430
+        - -0.18297218E+01
+        - 0.22016247E+01
+        - -0.13975634E+01
+        - 0.44866894
+        - -0.57963628E-01
+      default: true
+      equation: Shpilrain1985
+      reference: Ohse1985
+      comment: "IAEA2008 seems to use the same equation Ohse (1985)
+      is [40] there"
+    Lide2005:
+      Tmax: 873.15
+      Tmin: 370.95
+      Tref: 370.95
+      c1: 927.0
+      c2: 0.23
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.0846
+      B: 6.412
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.0916
+      B: 6.25
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Ohse1985:
+      a: -6.4406
+      b: -0.3958
+      c: 556.835
+      equation: Ohse1985
+      comment: "p. 771, Eq. (9)"
+  expansion_coefficient:
+    IidaGuthrie1988:
+      <<: *density_Na_IidaGuthrie1988
+      default: true
+  heat_capacity:
+    Ohse1985:
+      C1: 40.656
+      C2: -2.6410E-02
+      C3: 1.4363E-05
+      Tmin: *Tm_Na
+      Tmax: 1600
+      equation: Ohse1985
+      comment: "p. 426, Eq. (17), Tab. 14"
+      default: true
+    IidaGuthrie2015:
+      cp_0: 37.51
+      a: -19.22E-03  # T
+      b: 10.64E-06  # T^2
+      c: 0  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    IidaGuthrie1988:
+      alpha: 0.038E-08
+      beta: -4.5E-08
+      equation: CusackEnderby1960
+    Sobolev2011:
+      a: 3.126E-08
+      b: 6.218E-11
+      c: 3.093E-13
+      equation: Sobolev2011
+    Ohse1985:
+      range:  # coefficients for the different ranges
+        - a: 0.974
+          b: 1.440
+          c: -0.365
+          d: 1.041
+          Tmin: 371
+          Tmax: 1548.9
+      equation: Ohse1985
+      default: true
+    IidaGuthrie2015:
+      a: 2.49727E-08
+      b: 8.41382E-11
+      c: 3.05451E-13
+      Tmin: 370.15
+      Tmax: 1073.15
+      equation: Sobolev2011
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 541, Tab. 17.11/GT, quadratic fit to data"
+  sound_velocity:
+    BeyerRing1972:
+      Um: 2531
+      m_dUdT: 0.54
+      default: true
+      equation: linearExperimental
+    Blairs2007cubic:  # Sobolev2011 identical
+      A: 2660.7
+      B: -0.37667
+      C: -9.0366E-05
+      equation: Blairs2007cubic
+      reference: Blairs2007
+    Ohse1985:
+      Um: 2531
+      m_dUdT: 0.54
+      Tm: 371
+      equation: linearExperimental
+      reference: Ohse1985
+      comment: "p. 527, Tab. 1 (Beyer, R. T., The velocity of sound)"
+  surface_tension:
+    IidaGuthrie2015:
+      a: 197
+      b: -0.09
+      c: -370.85  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 203
+      b: -0.08
+      c: -371.15
+      equation: IAEA2008
+      comment: "p. 183, suggested relation pure Na"
+    Ohse1985:
+      a: 197.9
+      b: -0.101
+      c: -370.87  # -&Tm_Na is not well received by python-yaml
+      equation: IAEA2008
+      comment: "p. 692, Tab. 1"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 141.663
+      b: 0.00133256
+      c: -2.73094
+      Tmin: 370.15
+      Tmax: 1473.15
+      equation: SquareRoot
+      comment: "Vol II, p. 541, Tab. 17.11, square root fit to data"
+    Ohse1985:
+      a: 163.611
+      b: 0.0285875
+      c: -4.36132
+      Tmin: 371
+      Tmax: 1500
+      equation: SquareRoot
+      default: true
+      comment: "p. 750, fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 4.704
+      B: -5377
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Na
+      Tmax: 700
+    Ohse1985:
+      A: 11.2916
+      B: -12532.694
+      C: -0.3869
+      Tmin: 864
+      Tmax: 2361
+      equation: Ohse1985
+      comment: "p. 355, Tab. 6"
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 2.5
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II"
+    WittenbergDeWitt1972:
+      dV: 2.6
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+    DarkenGurry1953:
+      dV: 2.79
+      equation: SchinkeSauerwald1956
+      comment: "p. 126, Tab. 5-3"
+Ni:
+  Tm: &Tm_Ni 1728.15  # IidaGuthrie2015, Vol. 1, p. 9
+  Tb: &Tb_Ni 3186.15  # IidaGuthrie2015, Vol. 1, p. 9
+  M: 58.6934E-03  # IidaGuthrie2015, Vol. 1, p. 9
+  density:
+    IidaGuthrie1988: &density_Ni_IidaGuthrie1988
+      rho_m: 7900
+      lambda: 1.19
+      equation: Steinberg1974
+      default: true
+      comment: p. 71, Tab. 3.1
+    Assaeletal2012a:
+      c1: 7861
+      c2: 0.988
+      Tref: 1728
+      Tmin: 1728
+      Tmax: 2500
+      uncertainty: 1.7%
+      equation: Assaeletal2012
+      comment: "p. 167 Eq (1) Tab. 6"
+  expansion_coefficient:
+    IidaGuthrie1988:
+      <<: *density_Ni_IidaGuthrie1988
+      default: true
+  dynamic_viscosity:
+    Assaeletal2012a:
+      a1: 0.505
+      a2: 2108.2
+      Tmin: 1728
+      Tmax: 2100
+      equation: Assaeletal2012
+      uncertainty: 14.6%
+      comment: "p. 177, Eq. (2), Tab. 13"
+      default: true
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 38.49
+      Tmin: 1726
+      Tmax: 2000
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  sound_velocity:
+    IidaGuthrie1988:
+      Um: 4036
+      m_dUdT: 0.3501
+      default: true
+      equation: linearExperimental
+      comment: p. 105, Tab. 4.7 Ref. (7)
+      uncertainty: 0.1%
+  surface_tension:
+    IidaGuthrie1988:
+      a: 1778
+      b: -0.38
+      Tmin: *Tm_Ni
+      Tmax: *Tm_Ni
+      default: true
+      equation: Sobolev2011
+      comment: p. 134, Tab. 5.4
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 6.666
+      B: -20765
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Ni
+      Tmax: 2150
+      comment: Vol. 1, p. 515 Tab. 17.5
+    IidaGuthrie1988:
+      A: 16.95
+      B: -22400
+      C: -2.01
+      equation: IidaGuthrie2015
+      unit: mmHg
+      Tmin: *Tm_Ni
+      Tmax: *Tb_Ni
+      comment: p. 88, Tab. 4.2
+  volume_change_fusion:
+    WittenbergDeWitt1972:
+      dV: 6.3
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Pb:
+  Tm: &Tm_Pb 600.55
+  Tb: 2023.15
+  M: 207.2E-03
+  density:
+    IidaGuthrie1988: &density_Pb_IidaGuthrie1988  # almost identical
+      rho_m: 10670  # to IidaGuthrie2015
+      lambda: 1.32
+      default: true
+      equation: Steinberg1974
+    Sobolev2011:
+      rho_s: 11441
+      drhodT: -1.2795
+      equation: Sobolev2011
+    Lide2005:
+      Tmax: 973.15
+      Tmin: 600.61
+      Tref: 600.61
+      c1: 10660.0
+      c2: 1.22
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+    Assaeletal2012a:
+      c1: 10656
+      c2: 1.239
+      Tref: 600.61
+      Tmin: 601
+      Tmax: 2000
+      uncertainty: 0.9%
+      equation: Assaeletal2012
+      comment: "p. 167 Eq (1) Tab. 6"
+  dynamic_viscosity:
+    OECDNEA2015:
+      a: 4.55E-04
+      b: 0
+      c: 1069
+      Tmin: *Tm_Pb
+      Tmax: 1473
+      equation: IAEA2008
+      reference: OECDNEA2015
+      comment: "p. 103, Eq. (2.81)"
+      default: true
+    Hirai1992:
+      A: 0.5078
+      B: 8.142
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.5078
+      B: 8.142
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2012a:
+      a1: 0.295
+      a2: 427.1
+      Tmin: 601
+      Tmax: 1400
+      equation: Assaeletal2012
+      uncertainty: 4.8%
+      comment: "p. 177, Eq. (2), Tab. 13"
+  expansion_coefficient:
+    OECDNEA2015:
+      a: 8942
+      default: true
+      equation: OECDNEA2015
+    IidaGuthrie1988: *density_Pb_IidaGuthrie1988
+  heat_capacity:
+    Gurvich1991:
+      cp_0: 175.1
+      a: -4.961E-02
+      b: 1.985E-05
+      c: -2.099E-09
+      d: -1.524E+06
+      Tmin: *Tm_Pb
+      Tmax: 2000
+      default: true
+      equation: Gurvich1991
+      reference: OECDNEA2015
+      comment: "p. 91, Eq. (2.47)"
+    Sobolev2011:
+      cp_0: 176.2
+      a: -4.923E-02
+      b: 1.544E-05
+      c: -1.524E+06
+      equation: Sobolev2011
+      reference: OECDNEA2015
+      comment: "p. 91, Eq. (2.48)"
+    IidaGuthrie2015:
+      cp_0: 32.49
+      a: -3.10E-03  # T
+      b: 0  # T^2
+      c: 0  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    IidaGuthrie1988:
+      alpha: 0.0479E-08
+      beta: 66.6E-08
+      default: true
+      equation: CusackEnderby1960
+    Sobolev2011:
+      alpha: 0.0471E-08
+      beta: 67.0E-08
+      equation: CusackEnderby1960
+    IidaGuthrie2015GT:
+      alpha: 4.62945E-10
+      beta: 6.74313E-07
+      Tmin: 600.15
+      Tmax: 1273.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 538, Tab. 17.11/GT, linear fit to data"
+    IidaGuthrie2015KM:
+      alpha: 4.74767E-10
+      beta: 6.66258E-07
+      Tmin: 600.15
+      Tmax: 1073.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 538, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    IidaGuthrie1988:
+      Um: 1810
+      m_dUdT: 0.38
+      default: true
+      equation: linearExperimental
+    BeyerRing1972:
+      Um: 1820
+      m_dUdT: 0.28
+      equation: linearExperimental
+    Blairs2007:
+      A: 2008
+      B: -0.317
+      equation: Blairs2007
+    Sobolev2011:
+      A: 1953
+      B: -0.2463
+      equation: Blairs2007
+  surface_tension:
+    Sobolev2011:
+      a: 525.9
+      b: -0.113
+      Tmin: *Tm_Pb
+      Tmax: 1300
+      default: true
+      equation: Sobolev2011
+      reference: OECDNEA2015
+      comment: >
+        p. 64, Eq. (2.25), source is Jauch (1986) but eq. is similar
+        to Sobolev (2911)
+    IidaGuthrie2015:
+      a: 457
+      b: -0.11
+      c: -600.65  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 471
+      b: -0.156
+      c: -600.15
+      equation: IAEA2008
+      comment: "p. 177, suggested relation pure Pb"
+    Tanakaetal2004:
+      a: 499
+      b: -0.089
+      Tmin: 757
+      Tmax: 907
+      equation: Sobolev2011
+      comment: "taken directly from the abstract"
+  thermal_conductivity:
+    Touloukian1970b:
+      a: 9.2
+      b: 0.011
+      Tmin: *Tm_Pb
+      Tmax: 1300
+      default: true
+      equation: Touloukian1970b
+      reference: OECDNEA2015
+      comment: >
+        p. 121, Eq. (2.89), eq. named differently but of identical shape
+    IidaGuthrie2015:
+      a: 5.52888
+      b: 0.0164353
+      Tmin: 600.15
+      Tmax: 873.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 538, Tab. 17.11, linear fit to data"
+    Assaeletal2017:
+      c1: 16.093
+      c2: 0.0078526
+      Tm: 600.61
+      Tmin: 602
+      Tmax: 1150
+      equation: Assaeletal2017
+      reference: Assaeletal2017
+      comment: "p. 16 Eq. (2), Tab. 8"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 4.911
+      B: -9701
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Pb
+      Tmax: 1200
+    Sobolev2011:
+      a: 5.76E+09
+      b: -22131
+      equation: Sobolev2011
+      reference: OECDNEA2015
+      comment: "p. 51, Eq. (2.16a)"
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 3.5
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 3.81
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Pr:
+  Tm: &Tm_Pr 1204.15  # 1208.15 K in IidaGuthrie1988
+  Tb: 3793.15  # 3400.15 K in IidaGuthrie1988, 3563.15 K Vertex422011
+  M: 140.9077E-03
+  density:
+    IidaGuthrie2015: &density_Pr_IidaGuthrie2015
+      rho_m: 6611
+      lambda: .25
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 510"
+    Lide2005:
+      Tmax: 1733.15
+      Tmin: 1204.15
+      Tref: 1204.15
+      c1: 6500.0
+      c2: 0.93
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.9359
+      B: 11.18
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.9359
+      B: 11.18
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Pr_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 42.97
+      Tmin: *Tm_Pr
+      Tmax: 1500
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015:
+      value: 1.38E-06
+      Tmin: 1208.15
+      Tmax: 1208.15
+      reference: IidaGuthrie2015
+      default: true
+      comment: "Vol II, p. 540, Tab. 17.11/GT"
+      equation: constant
+  sound_velocity:
+    Blairs2007:
+      A: 2026.5
+      B: -0.084
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 716
+      b: -0.08
+      c: -1204.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 528, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 716
+      b: -0.081
+      c: -1205.15
+      equation: IAEA2008
+      comment: "p. 181, mean relation"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 4.772
+      B: -17315
+      C: 0
+      unit: atm
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Pr
+      Tmax: 2200
+  volume_change_fusion:
+    WittenbergDeWitt1972:
+      dV: 0.02
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Pu:
+  Tm: &Tm_Pu 912.65  # almost identical to IidaGuthrie2015
+  Tb: 3508.15  # almost identical to IidaGuthrie2015
+  M: 244E-03
+  density:
+    IidaGuthrie2015: &density_Pu_IidaGuthrie2015
+      rho_m: 16650
+      lambda: 1.41
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 509"
+    Lide2005:
+      Tmax: 1223.15
+      Tmin: 913.15
+      Tref: 913.15
+      c1: 16630.0
+      c2: 1.419
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 1.089
+      B: 12.88
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 1.089
+      B: 12.88
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Pu_IidaGuthrie2015
+  resistivity:
+    IidaGuthrie2015:
+      value: 1.33E-06
+      Tmin: 913.15
+      Tmax: 913.15
+      reference: IidaGuthrie2015
+      default: true
+      comment: "Vol II, p. 539, Tab. 17.11/GT"
+      equation: constant
+  sound_velocity:
+    Blairs2007:
+      A: 1119
+      B: 0.083
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 550
+      b: 0
+      c: -913.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 550
+      b: 0
+      c: -913.15
+      equation: IAEA2008
+      comment: "p. 180, single value"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 3.666
+      B: -16658
+      C: 0
+      unit: atm
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Pu
+      Tmax: 2450
+  volume_change_fusion:
+    WittenbergDeWitt1972:
+      dV: -2.4
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Rb:
+  Tm: &Tm_Rb 312.45
+  Tb: 961.15
+  M: 85.4678E-03
+  density:
+    IidaGuthrie2015: &density_Rb_IidaGuthrie2015
+      rho_m: 1480
+      lambda: .45
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 510"
+    Ohse1985Exp:
+      a:
+        - 1.58780
+        - -0.21918
+        - -0.47848
+        - 0.46885
+        - -0.21263
+        - 0.3962E-01
+        - -0.471E-02
+      Tmax: 2100
+      equation: Shpilrain1985
+      reference: Ohse1985
+    Ohse1985Rec:  # recommended  equation
+      a:
+        - 0.13511203E+01
+        - 0.15219888E+01
+        - -0.54165931E+01
+        - 0.74152710E+01
+        - -0.53606866E+01
+        - 0.19604833E+01
+        - -0.28895999
+      default: true
+      equation: Shpilrain1985
+      reference: Ohse1985
+    Lide2005:
+      Tmax: 1073.15
+      Tmin: 312.46
+      Tref: 312.46
+      c1: 1460.0
+      c2: 0.451
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.0906
+      B: 4.840
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.0927
+      B: 5.13
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Ohse1985:
+      a: -5.7652
+      b: -0.49503
+      c: 356.87
+      equation: Ohse1985
+      comment: "p. 771, Eq. (11)"
+  expansion_coefficient:
+    IidaGuthrie2015:
+      <<: *density_Rb_IidaGuthrie2015
+      default: true
+  heat_capacity:
+    Ohse1985:
+      C1: 35.494
+      C2: -1.2864E-02
+      C3: 0.85409E-05
+      Tmin: *Tm_Rb
+      Tmax: 1600
+      equation: Ohse1985
+      comment: "p. 426, Eq. (17), Tab. 14"
+      default: true
+    IidaGuthrie2015:
+      cp_0: 40.88
+      a: -26.21E-03  # T
+      b: 14.14E-06  # T^2
+      c: 0.33E+05  # T^-2
+      equation: IidaGuthrie2015
+  resistivity:
+    Ohse1985:
+      equation: Ohse1985
+      reference: Ohse1985
+      default: true
+      comment: "p. 730, Eq. (36), Tab. 3"
+      Tmin: 312.6
+      Tmax: 1500
+      range:  # coefficients for the different ranges
+        # order by increasing Tmax
+        - a: 1.353
+          b: 1.051
+          c: 0.485
+          d: -0.498
+          Tmin: 312.6
+          Tmax: 611.7
+        - a: 1.689
+          b: 1.207
+          c: 0.049
+          d: 4.138
+          Tmin: 611.7
+          Tmax: 1087.7
+        - a: 2.057
+          b: 0.880
+          c: 3.153
+          d: -0.531
+          Tmin: 1087.7
+          Tmax: 1500
+    IidaGuthrie2015:
+      a: 3.06821E-08
+      b: 4.77161E-10
+      c: 4.84378E-13
+      Tmin: 311.85
+      Tmax: 773.15
+      equation: Sobolev2011
+      comment: "Vol II, p. 540, Tab. 17.11/GT, fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 1324.5
+      B: -0.2313
+      C: -1.057E-04
+      default: true
+      equation: Blairs2007cubic
+    Ohse1985:
+      Um: 1260
+      m_dUdT: 0.37
+      Tm: 312
+      equation: linearExperimental
+      reference: Ohse1985
+      comment: "p. 527, Tab. 1 (Beyer, R. T., The velocity of sound)"
+  surface_tension:
+    IidaGuthrie2015:
+      a: 89.6
+      b: -0.056
+      c: -312.45  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 89.6
+      b: -0.056
+      c: -312.15
+      equation: IAEA2008
+      comment: "p. 181, mean relation"
+    Ohse1985:
+      a: 89.1
+      b: -0.060
+      c: -312.45  # -&Tm_Rb is not well received by python-yaml
+      equation: IAEA2008
+      comment: "p. 692, Tab. 1"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 39.7028
+      b: -0.0178232
+      Tmin: 311.85
+      Tmax: 1773.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 540, Tab. 17.11, linear fit to data"
+    Ohse1985:
+      a: 38.6597
+      b: -0.0173939
+      Tmin: 312.5
+      Tmax: 1500
+      equation: Touloukian1970b
+      reference: Ohse1985
+      comment: "p. 751, linear fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 4.312
+      B: -4040
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Rb
+      Tmax: 550
+    Ohse1985:
+      A: 9.6922
+      B: -9266.648
+      C: -0.3388
+      Tmin: 707
+      Tmax: 2073
+      equation: Ohse1985
+      comment: "p. 355, Tab. 6"
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 2.5
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II"
+    WittenbergDeWitt1972:
+      dV: 2.3
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+    DarkenGurry1953:
+      dV: 1.85
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 126, Tab. 5-3"
+Sb:
+  Tm: &Tm_Sb 903.65
+  Tb: &Tb_Sb 1913.15
+  M: 121.7E-03
+  density:
+    Assaeletal2012a:
+      c1: 6467
+      c2: 0.608
+      Tref: 899
+      Tmin: 900
+      Tmax: 1300
+      uncertainty: 0.8%
+      equation: Assaeletal2012
+      comment: "p. 167 Eq (1) Tab. 6"
+    IidaGuthrie2015: &density_Sb_IidaGuthrie2015
+      rho_m: 6483
+      lambda: .82
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 508"
+    Lide2005:
+      Tmax: 1018.15
+      Tmin: 903.78
+      Tref: 903.78
+      c1: 6530.0
+      c2: 0.67
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.3042
+      B: 11.67
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.3042
+      B: 11.67
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2012a:
+      a1: 0.637
+      a2: 712.5
+      Tmin: 900
+      Tmax: 1300
+      equation: Assaeletal2012
+      uncertainty: 8.3%
+      comment: "p. 177, Eq. (2), Tab. 13"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Sb_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 31.38
+      Tmin: *Tm_Sb
+      Tmax: 1300
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015:
+      alpha: 2.70413E-10
+      beta: 8.90763E-07
+      Tmin: 903.15
+      Tmax: 1273.15
+      equation: CusackEnderby1960
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 535, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 1330.6
+      B: 1.0471
+      C: -4.4946E-04
+      default: true
+      equation: Blairs2007cubic
+  surface_tension:
+    IidaGuthrie2015:
+      a: 371
+      b: -0.045
+      c: -903.75  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 527, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 382
+      b: -0.063
+      c: -903.15
+      equation: IAEA2008
+      comment: "p. 170, suggested relation pure Sb"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 26.4617
+      b: -0.00521552
+      Tmin: 903.15
+      Tmax: 1073.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 535, Tab. 17.11, linear fit to data"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 6.37
+      B: -6500
+      C: 0
+      unit: mmHg
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Sb
+      Tmax: *Tb_Sb
+      comment: "p. 516, Tab 17.5b: total pressure"
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: -0.95
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 0.15
+      equation: SchinkeSauerwald1956
+      comment: "p. 4527, Tab. I, just the mean value of the given range
+      limits -0.95 to +1.1"
+Se:
+  Tm: &Tm_Se 493.35
+  Tb: &Tb_Se 958.15
+  M: 78.9E-03
+  conductivity:
+    MarelLugt1979:
+      sigma0: 0.08
+      E: 0.47
+      default: true
+      Tmin: *Tm_Se
+      Tmax: 693.15
+      equation: MarelLugt1979
+      comment: "p. 833, units not explained just guesswork!"
+    Baker1968:
+      sigma0: 6.3E+03
+      DeltaE: 2.37
+      Tmin: 663.15
+      Tmax: 823.15
+      equation: Baker1968
+      comment: "p. 1091, units not fully explained"
+  density:
+    IidaGuthrie2015: &density_Se_IidaGuthrie2015
+      rho_m: 4000
+      lambda: 1.17
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 510"
+  dynamic_viscosity:
+    KostalMalek2010:
+      A: -9.27
+      B: 2795
+      T0: 226.1
+      Tmin: *Tm_Se  # larger than minimum taken from Tab. 1 rotating bob
+      Tmax: 660  # approximate value, highest literature value from Fig. 1
+      default: true
+      equation: KostalMalek2010
+      comment: >
+        "p. 2804, Fig. 1, fit overestimates dynamic viscosity measurements
+        in the liquid range by about 20%"
+    IidaGuthrie2015:  # strong deviation from KostalMalek2010 for low T
+      A: 0.447
+      B: 16.5
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Se_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 35.1
+      Tmin: *Tm_Se
+      Tmax: 800
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    Baker1968:
+      A: 6000
+      B: 3.80
+      Tmin: 663.15
+      Tmax: 823.15
+      default: true
+      equation: Baker1968
+      comment: "p. 1091, units not fully explained"
+  sound_velocity:
+    Blairs2007:
+      A: 1599.8
+      B: -1.240
+      C: 2.775E-04
+      default: true
+      equation: Blairs2007cubic
+  surface_tension:
+    IidaGuthrie2015:
+      a: 103
+      b: -0.15
+      c: -493.65  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 109
+      b: -0.21
+      c: -493.15  # Tm/K
+      equation: IAEA2008
+      comment: "p. 182, suggested relation pure Se"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 0.3
+      b: 0
+      Tmin: 490.15
+      Tmax: 490.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 540, Tab. 17.11, only value at Tm given"
+  vapour_pressure:
+    Baker1968:
+      A: 5.265
+      B: -5043
+      C: 0
+      Tmin: 705.65
+      Tmax: 1653.15
+      default: true
+      equation: IidaGuthrie2015
+      reference: Baker1968
+      comment: "p. 1090, Eq. (1)"
+    IidaGuthrie2015:
+      A: 8.09
+      B: -4990
+      C: 0
+      unit: mmHg
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Se
+      Tmax: *Tb_Se
+      comment: "p. 516, Tab 17.5b: Se_x, mainly Se_6"
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 11.55
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the two values given
+      by Kubaschewski (1949): 15.9% - 7.2%"
+    WittenbergDeWitt1972:
+      dV: 16.8
+      default: true
+      equation: SchinkeSauerwald1956
+      comment: "p. 4527, Tab. I"
+Si:
+  Tm: 1687.15  # Haynes et al. (2016), p. 4-33
+  Tb: 3538.15  # Haynes et al. (2016), p. 4-33
+  M: 28.085  # Haynes et al. (2016), p. 1-11
+  density:
+    Assaeletal2012:
+      c1: 2550
+      c2: 0.264
+      Tref: 1687.0
+      Tmin: 1687
+      Tmax: 2000
+      uncertainty: 2.2%
+      equation: Assaeletal2012
+      comment: "p. 6 Eq (1) Tab. 2"
+      default: true
+  dynamic_viscosity:
+    Assaeletal2012:
+      a1: 1.0881
+      a2: 1478.7
+      Tmin: 1685
+      Tmax: 1900
+      uncertainty: 15.7%
+      equation: Assaeletal2012
+      comment: "p. 13 Eq (2) Tab. 5"
+      default: true
+Sn:
+  Tm: &Tm_Sn 505.078  # 504.99 K in IidaGuthrie1988
+  Tb: 2875.15  # 2548.15 K in IidaGuthrie1988
+  M: 118.6E-03
+  density:
+    IidaGuthrie1988: &density_Sn_IidaGuthrie1988
+      rho_m: 6980.
+      lambda: .61
+      default: true
+      equation: Steinberg1974
+    ValenciaQuested2008:
+      rho_m: 6973.
+      lambda: .7125
+      equation: Steinberg1974
+    Assaeletal2010:
+      c1: 6979
+      c2: 0.652
+      Tref: 505.08
+      Tmin: 506
+      Tmax: 1950
+      equation: Assaeletal2012
+      reference: Assaeletal2010
+      comment: "p. 033105-4, Eq. (2)"
+    Lide2005:
+      Tmax: 1473.15
+      Tmin: 505.08
+      Tref: 505.08
+      c1: 6990.0
+      c2: 0.601
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.4670
+      B: 5.833
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.4670
+      B: 5.833
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2010:
+      a1: 0.408
+      a2: 343.4
+      Tmin: 506
+      Tmax: 1280
+      equation: Assaeletal2012
+      reference: Assaeletal2010
+      comment: "p. 033105-6/7, Eq. (4)"
+  expansion_coefficient:
+    IidaGuthrie1988: *density_Sn_IidaGuthrie1988
+  heat_capacity:
+    IidaGuthrie2015:
+      cp_0: 32.84
+      a: -6.28E-03  # T
+      b: 0  # T^2
+      c: 0  # T^-2
+      equation: IidaGuthrie2015
+      default: true
+  resistivity:
+    IidaGuthrie1988:
+      alpha: 0.0249E-08
+      beta: 35.4E-08
+      default: true
+      equation: CusackEnderby1960
+    IidaGuthrie2015GT:
+      alpha: 2.56947E-10
+      beta: 3.43476E-07
+      Tmin: 505.15
+      Tmax: 1273.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 542, Tab. 17.11/GT, linear fit to data"
+    IidaGuthrie2015KM:
+      alpha: 2.69154E-10
+      beta: 3.36394E-07
+      Tmin: 505.15
+      Tmax: 803.15
+      equation: CusackEnderby1960
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 542, Tab. 17.11/KM, linear fit to data"
+  sound_velocity:
+    IidaGuthrie1988:
+      Um: 2420
+      m_dUdT: 0.20
+      default: true
+      equation: linearExperimental
+    BeyerRing1972:
+      Um: 2474
+      m_dUdT: 0.27
+      equation: linearExperimental
+    Blairs2007:
+      A: 2601
+      B: -0.277
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 555
+      b: -0.07
+      c: -505.05  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 585.7
+      b: -0.124
+      c: -505.15
+      equation: IAEA2008
+      comment: "p. 185"
+    Tanakaetal2004:
+      a: 579
+      b: -0.066
+      Tmin: 723
+      Tmax: 993
+      equation: Sobolev2011
+      comment: "taken directly from the abstract"
+    MillsSu2006:
+      a: 555
+      b: -0.07
+      c: -505.0
+      equation: IAEA2008
+      comment: "p. 347, Tab. 23 Adopted (table footnote)"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 19.8497
+      b: 0.0201224
+      Tmin: 505.15
+      Tmax: 773.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 542, Tab. 17.11, linear fit"
+    Assaeletal2017:
+      c1: 28.037
+      c2: 0.023397
+      Tm: 505.8
+      Tmin: 507
+      Tmax: 2000
+      equation: Assaeletal2017
+      reference: Assaeletal2017
+      comment: "p. 16 Eq. (2), Tab. 8"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.262
+      B: -15332
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Sn
+      Tmax: 1850
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 2.8
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 2.4
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Te:
+  Tm: &Tm_Te 723.15  # 722.95 K in IidaGuthrie1988
+  Tb: 1261.15  # 1663.15 K in IidaGuthrie1988
+  M: 127.6E-03
+  density:
+    IidaGuthrie2015: &density_Te_IidaGuthrie2015
+      rho_m: 5800
+      lambda: .73
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 510"
+    Lide2005:
+      Tmax: 873.15
+      Tmin: 722.66
+      Tref: 722.66
+      c1: 5700.0
+      c2: 0.35
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    IidaGuthrie2015:
+      A: 0.699
+      B: 5.3
+      default: true
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Te_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 37.7
+      Tmin: *Tm_Te
+      Tmax: 873
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015:
+      a: 3.76373E-06
+      b: 6.55205E+12
+      c: 6.50001
+      Tmin: 723.15
+      Tmax: 1273.15
+      equation: fractionalNegativeExponent
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 542, Tab. 17.11/GT, acceptable fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: -402.6
+      B: 2.7788
+      C: -1.2512E-03
+      default: true
+      equation: Blairs2007cubic
+  surface_tension:
+    IidaGuthrie2015:
+      a: 239
+      b: -0.104
+      c: -723.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 239
+      b: -0.104
+      c: -733.15
+      equation: IAEA2008
+      comment: "p. 184, equal to IidaGuthrie2015 but T_ref differs by 10K"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: -5.18037
+      b: 0.0106087
+      Tmin: 723.15
+      Tmax: 1073.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 541, Tab. 17.11, linear fit"
+  volume_change_fusion:
+    WittenbergDeWitt1972:
+      dV: 4.9
+      default: true
+      equation: SchinkeSauerwald1956
+      comment: "p. 4527, Tab. I"
+Sr:
+  Tm: &Tm_Sr 1070.15  # IidaGuthrie1988
+  Tb: 1912.15  # IidaGuthrie1988
+  M: 87.62E-03  # IidaGuthrie1988
+  density:
+    Hiemstraetal1977:
+      c1: 2.5547E+03
+      c2: 0.283
+      Tref: 273.15
+      Tmin: 1053.15
+      Tmax: 1153.15
+      equation: Assaeletal2012
+      default: true
+      comment: "p. 275"
+    BohdanskySchins1968:
+      rho_s: 2.648E+03
+      drhodT: -0.262
+      Tmin: 1228
+      Tmax: 1582
+      equation: Sobolev2011
+      comment: "p. 2335, Tab. 2"
+  surface_tension:
+    BohdanskySchins1968:
+      a: 392
+      b: -0.085
+      Tmin: 1152
+      Tmax: 1580
+      equation: Sobolev2011
+      default: true
+      comment: "p. 2333, p. 2334 Tab. 1"
+  vapour_pressure:
+    AsanoKubo1978:
+      A: 10.750
+      B: -8427
+      C: 0
+      unit: Pa
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: 494
+      Tmax: 660
+    Boerboometal1964:
+      A: 7.498
+      B: -7628
+      C: 0
+      unit: mmHg
+      equation: IidaGuthrie2015
+      Tmin: 773.15
+      Tmax: 923.15
+    DeMariaPiacente1974:
+      A: 4.75
+      B: -7720
+      C: 0
+      unit: atm
+      equation: IidaGuthrie2015
+      Tmin: 1086
+      Tmax: 1310
+    Kelley1935:
+      A: 37800
+      B: 5.83
+      C: 41.58
+      equation: Kelley1935
+      comment: "p. 99"
+Tl:
+  Tm: &Tm_Tl 577.15  # 575.65 K in IidaGuthrie1988
+  Tb: 1746.15  # 1730.15 K in IidaGuthrie1988
+  M: 204.3E-03
+  density:
+    IidaGuthrie2015: &density_Tl_IidaGuthrie2015
+      rho_m: 11350
+      lambda: 1.30
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 510"
+    Lide2005:
+      Tmax: 873.15
+      Tmin: 577.15
+      Tref: 577.15
+      c1: 11220.0
+      c2: 1.44
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+    Assaeletal2012:
+      c1: 11233
+      c2: 1.200
+      Tref: 576.7
+      Tmin: 576
+      Tmax: 1200
+      uncertainty: 0.9%
+      equation: Assaeletal2012
+      comment: "p. 6 Eq (1) Tab. 2"
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.5242
+      B: 7.638
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.5242
+      B: 7.638
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+    Assaeletal2012:
+      a1: 0.3017
+      a2: 412.84
+      Tmin: 577
+      Tmax: 800
+      uncertainty: 5.1%
+      equation: Assaeletal2012
+      comment: "p. 13 Eq (2) Tab. 5"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Tl_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 30.1
+      Tmin: *Tm_Tl
+      Tmax: 1760
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie2015:
+      alpha: 2.89344E-10
+      beta: 5.64272E-07
+      Tmin: 576.15
+      Tmax: 773.15
+      equation: CusackEnderby1960
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 541, Tab. 17.11/GT, linear fit to data"
+  sound_velocity:
+    Blairs2007:
+      A: 1795
+      B: -0.239
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 459
+      b: -0.106
+      c: -577.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 465
+      b: -0.095
+      c: -578.15
+      equation: IAEA2008
+      comment: "p. 184, suggested relation pure Tl"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 24.6
+      b: 0
+      Tmin: 576.15
+      Tmax: 576.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 541, Tab. 17.11, only value at Tm given"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.259
+      B: -9037
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Tl
+      Tmax: 1100
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 3.2
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II"
+    WittenbergDeWitt1972:
+      dV: 2.2
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+U:
+  Tm: &Tm_U 1408.15  # 1405.15 K in IidaGuthrie1988
+  Tb: 4404.15  # 4091.15 K in IidaGuthrie1988, 4200.15 K Vertex422011
+  M: 238.029E-03
+  density:
+    IidaGuthrie2015: &density_U_IidaGuthrie2015
+      rho_m: 17270
+      lambda: 1.03
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 511"
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.4849
+      B: 30.45
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.4849
+      B: 30.45
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_U_IidaGuthrie2015
+  resistivity:
+    IidaGuthrie2015:
+      alpha: 2.5138E-10
+      beta: 2.8258E-07
+      Tmin: 1406.15
+      Tmax: 1573.15
+      equation: CusackEnderby1960
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 542, Tab. 17.11/GT, linear fit to data"
+  surface_tension:
+    IidaGuthrie2015:
+      a: 1552
+      b: -0.27
+      c: -1408.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 1552
+      b: -0.27
+      c: -1403.15
+      equation: IAEA2008
+      comment: "p. 185"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 20.735
+      B: -28776
+      C: -4.0962
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_U
+      Tmax: 2500
+  volume_change_fusion:
+    WittenbergDeWitt1972:
+      dV: 2.2
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Yb:
+  Tm: 1092.15  # 1097.15 K in IidaGuthrie1988
+  Tb: 1469.15  # 1700.15 K in IidaGuthrie1988
+  M: 173.0E-03
+  density:
+    IidaGuthrie2015: &density_Yb_IidaGuthrie2015
+      rho_m: 6720
+      lambda: 3.25
+      default: true
+      equation: Steinberg1974
+      comment: "Vol. II, Tab. 17.4(a), p. 509"
+  dynamic_viscosity:
+    Hirai1992:
+      A: 0.1974
+      B: 23.77
+      default: true
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.1974
+      B: 23.77
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Yb_IidaGuthrie2015
+  resistivity:
+    IidaGuthrie2015:
+      value: 1.64E-06
+      Tmin: 1097.15
+      Tmax: 1097.15
+      equation: constant
+      default: true
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 542, Tab. 17.11/GT, only single value available"
+  sound_velocity:
+    Blairs2007:
+      A: 1491
+      B: -0.198
+      default: true
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 320
+      b: -0.102
+      c: -1092.15  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 320
+      b: -0.102
+      c: -1097.15
+      equation: IAEA2008
+      comment: "p. 186"
+  volume_change_fusion:
+    WittenbergDeWitt1972:
+      dV: 4.8
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+Zn:
+  Tm: &Tm_Zn 692.62
+  Tb: 1180.15  # 1203.15 K in IidaGuthrie1988
+  M: 65.38E-03
+  density:
+    IidaGuthrie2015: &density_Zn_IidaGuthrie2015
+      rho_m: 6575
+      lambda: .98
+      default: true
+      equation: Steinberg1974
+    Assaeletal2012:
+      c1: 6559
+      c2: 0.884
+      Tref: 692.677
+      Tmin: 692
+      Tmax: 910
+      equation: Assaeletal2012
+      comment: "p. 6, Eq. (1), Tab. 2"
+    Lide2005:
+      Tmax: 973.15
+      Tmin: 692.68
+      Tref: 692.68
+      c1: 6570.0
+      c2: 1.1
+      comment: "p. 4-126 - 4-129, Density of molten elements and representative
+      salts"
+      equation: Assaeletal2012
+  dynamic_viscosity:
+    Assaeletal2012:
+      a1: 0.3291
+      a2: 631.12
+      Tmin: 695
+      Tmax: 1100
+      equation: Assaeletal2012
+      default: true
+      comment: "p. 13, Eq. (2), Tab. 5"
+    Hirai1992:
+      A: 0.5266
+      B: 10.91
+      equation: Hirai1992
+      comment: "p. 401/63 Tab. 1, cross-checked with Hirai1993"
+    IidaGuthrie2015:
+      A: 0.5266
+      B: 10.91
+      equation: Hirai1992
+      comment: "Vol. II p. 530 Tab. 17.9a"
+  expansion_coefficient:
+    IidaGuthrie2015: *density_Zn_IidaGuthrie2015
+  heat_capacity:
+    IidaGuthrie1988:
+      cp_mol: 31.38
+      Tmin: *Tm_Zn
+      Tmax: 1200
+      default: true
+      equation: IidaGuthrie1988
+      comment: "p. 91, Tab. 4.3"
+  resistivity:
+    IidaGuthrie1988:
+      value: 37.4E-08
+      equation: constant
+    Desaietal1984:
+      a: 40.81824
+      b: 8.51402E-03
+      c: -3.36074E-05
+      d: 2.06737E-08
+      Tmin: 692.73
+      Tmax: 1600
+      equation: Desaietal1984
+      default: true
+    IidaGuthrie2015:
+      a: 37.7641
+      b: 0.0194581
+      c: -4.66874E-05
+      d: 2.57481E-08
+      Tmin: 692.55
+      Tmax: 1073.15
+      equation: Desaietal1984
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 542, Tab. 17.11/GT, overfitted but minimum conserved"
+  sound_velocity:
+    IidaGuthrie1988:
+      Um: 2840
+      m_dUdT: 0.29
+      default: true
+      equation: linearExperimental
+    BeyerRing1972:
+      Um: 2850
+      m_dUdT: 0.31
+      equation: linearExperimental
+    Blairs2007:
+      A: 3082
+      B: -0.337
+      equation: Blairs2007
+  surface_tension:
+    IidaGuthrie2015:
+      a: 789
+      b: -0.21
+      c: -692.65  # Tm/K
+      equation: IAEA2008
+      default: true
+      comment: "Vol II, p. 529, Tab. 17.8, d gamma/dT including -, Tm in K"
+    Keene1993:
+      a: 817
+      b: -0.227
+      c: -693.15
+      equation: IAEA2008
+      comment: "p. 185"
+  thermal_conductivity:
+    IidaGuthrie2015:
+      a: 9.59238
+      b: 0.0576022
+      Tmin: 692.55
+      Tmax: 873.15
+      default: true
+      equation: Touloukian1970b
+      reference: IidaGuthrie2015
+      comment: "Vol II, p. 542, Tab. 17.11, linear fit"
+  vapour_pressure:
+    IidaGuthrie2015:
+      A: 5.378
+      B: -6286
+      C: 0
+      default: true
+      equation: IidaGuthrie2015
+      Tmin: *Tm_Zn
+      Tmax: 750
+  volume_change_fusion:
+    Kubaschewski1949:
+      dV: 4.2
+      equation: SchinkeSauerwald1956
+      comment: "p. 934, Tab. II, average of the range limits given
+      by Kubaschewski (1949): 0.7% - 4.4%"
+    WittenbergDeWitt1972:
+      dV: 4.08
+      equation: SchinkeSauerwald1956
+      default: true
+      comment: "p. 4527, Tab. I"
+...

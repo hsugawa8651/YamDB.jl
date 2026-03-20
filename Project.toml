@@ -1,0 +1,30 @@
+name = "YamDB"
+uuid = "3738f2fa-2244-4e2d-ac48-d4c5041abf79"
+license = "MIT"
+authors = ["Hiroharu Sugawara <hsugawa@gmail.com>"]
+version = "0.1.0"
+
+[deps]
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+SHA = "ea8e919c-243c-51af-8825-aaa63cd721ce"
+YAML = "ddb6d928-2868-570f-bddf-ab3f9cf99eb6"
+
+[weakdeps]
+Unitful = "1986cc42-f94f-5a68-af5c-568840ba703d"
+
+[extensions]
+YamDBUnitfulExt = "Unitful"
+
+[compat]
+JSON3 = "1.14.3"
+SHA = "0.7.0"
+Unitful = "1"
+YAML = "0.4"
+julia = "1.10"
+
+[extras]
+JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
+Test = "8dfed614-e22c-5e08-85e1-65c5234f0b40"
+
+[targets]
+test = ["Test", "JSON3"]
