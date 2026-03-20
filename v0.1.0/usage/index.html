@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/><title>Usage Guide · YamDB.jl</title><meta name="title" content="Usage Guide · YamDB.jl"/><meta property="og:title" content="Usage Guide · YamDB.jl"/><meta property="twitter:title" content="Usage Guide · YamDB.jl"/><meta name="description" content="Documentation for YamDB.jl."/><meta property="og:description" content="Documentation for YamDB.jl."/><meta property="twitter:description" content="Documentation for YamDB.jl."/><script data-outdated-warner src="../assets/warner.js"></script><link href="https://cdnjs.cloudflare.com/ajax/libs/lato-font/3.0.0/css/lato-font.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/juliamono/0.050/juliamono.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/fontawesome.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/solid.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/brands.min.css" rel="stylesheet" type="text/css"/><link href="https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.16.8/katex.min.css" rel="stylesheet" type="text/css"/><script>documenterBaseURL=".."</script><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" data-main="../assets/documenter.js"></script><script src="../search_index.js"></script><script src="../siteinfo.js"></script><script src="../../versions.js"></script><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-mocha.css" data-theme-name="catppuccin-mocha"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-macchiato.css" data-theme-name="catppuccin-macchiato"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-frappe.css" data-theme-name="catppuccin-frappe"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/catppuccin-latte.css" data-theme-name="catppuccin-latte"/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-dark.css" data-theme-name="documenter-dark" data-theme-primary-dark/><link class="docs-theme-link" rel="stylesheet" type="text/css" href="../assets/themes/documenter-light.css" data-theme-name="documenter-light" data-theme-primary/><script src="../assets/themeswap.js"></script></head><body><div id="documenter"><nav class="docs-sidebar"><div class="docs-package-name"><span class="docs-autofit"><a href="../">YamDB.jl</a></span></div><button class="docs-search-query input is-rounded is-small is-clickable my-2 mx-auto py-1 px-2" id="documenter-search-query">Search docs (Ctrl + /)</button><ul class="docs-menu"><li><a class="tocitem" href="../">Home</a></li><li class="is-active"><a class="tocitem" href>Usage Guide</a><ul class="internal"><li><a class="tocitem" href="#Loading-Substances"><span>Loading Substances</span></a></li><li><a class="tocitem" href="#Computing-Properties"><span>Computing Properties</span></a></li><li><a class="tocitem" href="#Querying-Metadata"><span>Querying Metadata</span></a></li><li><a class="tocitem" href="#Constant-Properties"><span>Constant Properties</span></a></li><li><a class="tocitem" href="#Salt-Mixtures"><span>Salt Mixtures</span></a></li><li><a class="tocitem" href="#Literature-References"><span>Literature References</span></a></li></ul></li><li><a class="tocitem" href="../equations/">Equation Patterns</a></li><li><a class="tocitem" href="../api/">API Reference</a></li><li><a class="tocitem" href="../reftest/">Reftest</a></li></ul><div class="docs-version-selector field has-addons"><div class="control"><span class="docs-label button is-static is-size-7">Version</span></div><div class="docs-selector control is-expanded"><div class="select is-fullwidth is-size-7"><select id="documenter-version-selector"></select></div></div></div></nav><div class="docs-main"><header class="docs-navbar"><a class="docs-sidebar-button docs-navbar-link fa-solid fa-bars is-hidden-desktop" id="documenter-sidebar-button" href="#"></a><nav class="breadcrumb"><ul class="is-hidden-mobile"><li class="is-active"><a href>Usage Guide</a></li></ul><ul class="is-hidden-tablet"><li class="is-active"><a href>Usage Guide</a></li></ul></nav><div class="docs-right"><a class="docs-settings-button docs-navbar-link fa-solid fa-gear" id="documenter-settings-button" href="#" title="Settings"></a><a class="docs-article-toggle-button fa-solid fa-chevron-up" id="documenter-article-toggle-button" href="javascript:;" title="Collapse all docstrings"></a></div></header><article class="content" id="documenter-page"><h1 id="usage-guide"><a class="docs-heading-anchor" href="#usage-guide">Usage Guide</a><a id="usage-guide-1"></a><a class="docs-heading-anchor-permalink" href="#usage-guide" title="Permalink"></a></h1><h2 id="Loading-Substances"><a class="docs-heading-anchor" href="#Loading-Substances">Loading Substances</a><a id="Loading-Substances-1"></a><a class="docs-heading-anchor-permalink" href="#Loading-Substances" title="Permalink"></a></h2><p>YamDB.jl provides four database access functions:</p><pre><code class="language-julia hljs">using YamDB
+
+# Liquid metals (36 substances)
+na = get_from_metals(&quot;Na&quot;)
+
+# Molten salts (151 substances)
+nacl = get_from_salts(&quot;NaCl&quot;)
+
+# Alloys (6 systems)
+lipb = get_from_alloys(&quot;Li-Pb&quot;)
+
+# Janz 1992 NIST database (1,022 substances)
+nacl_j = get_from_Janz1992(&quot;NaCl&quot;)
+
+# Custom YAML database file
+props = get_properties_from_db(&quot;/path/to/custom.yml&quot;, &quot;MySubstance&quot;)</code></pre><p>Pure substances return a <a href="../api/#YamDB.Properties"><code>Properties</code></a> object. Mixtures (names containing <code>-</code>) return a <a href="../api/#YamDB.MixtureProperties"><code>MixtureProperties</code></a> object.</p><h2 id="Computing-Properties"><a class="docs-heading-anchor" href="#Computing-Properties">Computing Properties</a><a id="Computing-Properties-1"></a><a class="docs-heading-anchor-permalink" href="#Computing-Properties" title="Permalink"></a></h2><p>All temperature-dependent properties take a <code>Properties</code> object and temperature in Kelvin:</p><pre><code class="language-julia hljs">na = get_from_metals(&quot;Na&quot;)
+
+density(na, 500.0)                 # Default source
+density(na, 500.0; source=&quot;Sobolev2011&quot;)  # Specific source
+dynamic_viscosity(na, 500.0)
+heat_capacity(na, 500.0)</code></pre><p>Volume change on fusion has no temperature argument:</p><pre><code class="language-julia hljs">volume_change_fusion(na)
+volume_change_fusion(na; source=&quot;Bockrisetal1962&quot;)</code></pre><h2 id="Querying-Metadata"><a class="docs-heading-anchor" href="#Querying-Metadata">Querying Metadata</a><a id="Querying-Metadata-1"></a><a class="docs-heading-anchor-permalink" href="#Querying-Metadata" title="Permalink"></a></h2><pre><code class="language-julia hljs"># Available properties
+property_list(na)
+
+# Sources for a property
+source_list(na, &quot;density&quot;)
+
+# Default source
+default_source(na, &quot;density&quot;)
+
+# Temperature limits
+equation_limits(na, &quot;density&quot;, &quot;Sobolev2011&quot;)  # (Tmin, Tmax)
+
+# Concentration limits
+equation_limits(na, &quot;density&quot;, &quot;SomeSource&quot;; variable=&quot;x&quot;)  # (xmin, xmax)
+
+# Comment and reference
+get_comment(na, &quot;density&quot;, &quot;Sobolev2011&quot;)
+get_reference(na, &quot;density&quot;, &quot;Sobolev2011&quot;)</code></pre><h2 id="Constant-Properties"><a class="docs-heading-anchor" href="#Constant-Properties">Constant Properties</a><a id="Constant-Properties-1"></a><a class="docs-heading-anchor-permalink" href="#Constant-Properties" title="Permalink"></a></h2><p>Melting temperature, boiling temperature, and molar mass are stored as fields:</p><pre><code class="language-julia hljs">na.Tm  # 370.87 K
+na.Tb  # 1156.15 K
+na.M   # 0.02299 kg/mol</code></pre><h2 id="Salt-Mixtures"><a class="docs-heading-anchor" href="#Salt-Mixtures">Salt Mixtures</a><a id="Salt-Mixtures-1"></a><a class="docs-heading-anchor-permalink" href="#Salt-Mixtures" title="Permalink"></a></h2><p>Mixtures have a <code>composition</code> dictionary with a <code>Properties</code> object per composition:</p><pre><code class="language-julia hljs">mix = get_from_salts(&quot;CaCl2-NaCl&quot;)
+
+# List compositions with density data
+get_compositions_with_property(mix, &quot;density&quot;)
+# [&quot;0-100&quot;, &quot;15-85&quot;, ..., &quot;100-0&quot;]
+
+# Include &quot;range&quot; composition
+get_compositions_with_property(mix, &quot;density&quot;; keep_range=true)
+
+# Access a specific composition
+props_50 = mix.composition[&quot;50.9-49.1&quot;]
+density(props_50, 1100.0)
+
+# Concentration-dependent (range) composition
+# x = mol% of first component
+range_props = mix.composition[&quot;range&quot;]
+density(range_props, 1100.0, 30.0)</code></pre><h2 id="Literature-References"><a class="docs-heading-anchor" href="#Literature-References">Literature References</a><a id="Literature-References-1"></a><a class="docs-heading-anchor-permalink" href="#Literature-References" title="Permalink"></a></h2><pre><code class="language-julia hljs"># Look up by citation key
+get_from_references(&quot;IidaGuthrie1988&quot;)
+# &quot;Iida, T., Guthrie, R.I.L., 1988. ...&quot;
+
+# From a custom references file
+get_references_from_db(&quot;/path/to/references.yml&quot;, &quot;SomeKey&quot;)</code></pre></article><nav class="docs-footer"><a class="docs-footer-prevpage" href="../">« Home</a><a class="docs-footer-nextpage" href="../equations/">Equation Patterns »</a><div class="flexbox-break"></div><p class="footer-message">Powered by <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> and the <a href="https://julialang.org/">Julia Programming Language</a>.</p></nav></div><div class="modal" id="documenter-settings"><div class="modal-background"></div><div class="modal-card"><header class="modal-card-head"><p class="modal-card-title">Settings</p><button class="delete"></button></header><section class="modal-card-body"><p><label class="label">Theme</label><div class="select"><select id="documenter-themepicker"><option value="auto">Automatic (OS)</option><option value="documenter-light">documenter-light</option><option value="documenter-dark">documenter-dark</option><option value="catppuccin-latte">catppuccin-latte</option><option value="catppuccin-frappe">catppuccin-frappe</option><option value="catppuccin-macchiato">catppuccin-macchiato</option><option value="catppuccin-mocha">catppuccin-mocha</option></select></div></p><hr/><p>This document was generated with <a href="https://github.com/JuliaDocs/Documenter.jl">Documenter.jl</a> version 1.17.0 on <span class="colophon-date" title="Friday 20 March 2026 08:29">Friday 20 March 2026</span>. Using Julia version 1.12.5.</p></section><footer class="modal-card-foot"></footer></div></div></div></body></html>
