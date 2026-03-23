@@ -14,7 +14,7 @@ Julia port of [yamdb](https://codebase.helmholtz.cloud/prosa/yamdb) — Yet Anot
 
 ```julia
 using Pkg
-Pkg.add(url="https://github.com/hsugawa8651/YamDB.jl")
+Pkg.add("YamDB")
 ```
 
 ## Quick Example
@@ -37,7 +37,17 @@ If you use YamDB.jl in your research, please cite both:
 > Sugawara, H. (2026). YamDB.jl: Julia port of yamdb for thermophysical properties of liquid metals and molten salts (Version 0.1.0) [Computer software].
 
 **Original yamdb:**
-> Weier, T., Sarma, M. (2023). yamdb — Yet Another (Molten) Materials Database. *Journal of Open Research Software*, 11(1), p.10. [doi:10.5334/jors.493](https://doi.org/10.5334/jors.493)
+> Weier, T., Nash, W., Personnettaz, P., Weber, N. (2025). Yamdb: easily accessible thermophysical properties of liquid metals and molten salts. *Journal of Open Research Software*, 13(1), 16. [doi:10.5334/jors.493](https://doi.org/10.5334/jors.493)
+
+**Data sources:** In addition, please cite the original sources of the data/equations for the material properties you use. References are available in `references.yml` shipped with YamDB.jl. You can look up references programmatically:
+
+```julia
+# Get the reference for a specific property source
+get_reference(na, "density", "Sobolev2011")
+
+# Look up by citation key
+get_from_references("Sobolev2011")
+```
 
 ## License
 

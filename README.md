@@ -22,7 +22,7 @@ YamDB.jl provides thermophysical property data for liquid metals, molten salts, 
 
 ```julia
 using Pkg
-Pkg.add(url="https://github.com/hsugawa8651/YamDB.jl")
+Pkg.add("YamDB")
 ```
 
 ## Quick Start
