@@ -2,6 +2,7 @@
 
 [![CI](https://github.com/hsugawa8651/YamDB.jl/actions/workflows/CI.yml/badge.svg)](https://github.com/hsugawa8651/YamDB.jl/actions/workflows/CI.yml)
 [![Dev Documentation](https://img.shields.io/badge/docs-dev-blue.svg)](https://hsugawa8651.github.io/YamDB.jl/dev/)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19197875.svg)](https://doi.org/10.5281/zenodo.19197875)
 
 Julia port of [yamdb](https://codebase.helmholtz.cloud/prosa/yamdb) — Yet Another Materials Database for thermophysical properties of liquid metals and molten salts.
 
