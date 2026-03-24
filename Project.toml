@@ -2,7 +2,7 @@ name = "YamDB"
 uuid = "3738f2fa-2244-4e2d-ac48-d4c5041abf79"
 license = "MIT"
 authors = ["Hiroharu Sugawara <hsugawa@gmail.com>"]
-version = "0.1.1"
+version = "0.1.2"
 
 [deps]
 JSON3 = "0f8b85d8-7281-11e9-16c2-39a750bddbf1"
