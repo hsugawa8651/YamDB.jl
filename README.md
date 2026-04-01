@@ -46,7 +46,7 @@ See the [documentation](https://hsugawa8651.github.io/YamDB.jl) for the full API
 If you use YamDB.jl in your research, please cite both:
 
 **YamDB.jl:**
-> Sugawara, H. (2026). YamDB.jl: Julia port of yamdb for thermophysical properties of liquid metals and molten salts (Version 0.1.0) [Computer software].
+> Sugawara, H. (2026). YamDB.jl: Julia port of yamdb for thermophysical properties of liquid metals and molten salts (Version 0.1.2) [Computer software].
 
 **Original yamdb:**
 > Weier, T., Nash, W., Personnettaz, P., Weber, N. (2025). Yamdb: easily accessible thermophysical properties of liquid metals and molten salts. *Journal of Open Research Software*, 13(1), 16. [doi:10.5334/jors.493](https://doi.org/10.5334/jors.493)
@@ -71,5 +71,5 @@ This project follows the [Julia Community Standards](https://julialang.org/commu
 
 MIT License. See [LICENSE](LICENSE) for details.
 
-Based on yamdb (Copyright 2018-2023 Tom Weier).
-Julia port Copyright (C) 2026 Hiroharu Sugawara.
+- Based on yamdb (Copyright 2018-2023 Tom Weier).
+- Julia port Copyright (C) 2026 Hiroharu Sugawara.
